@@ -10,6 +10,31 @@ The Confidence Score is the final, aggregated grade (from 1 to 10) that the syst
 
 The Confidence Score is the primary filter for the entire system. In the `monitor_trades` service, there is a hard filter called the `confidence_score_filter`. We configure a minimum threshold (e.g., `7`). Any pattern that does not meet this minimum score is automatically rejected and will never be traded.
 
+## The Data Pipeline: From Raw Data to Actionable Signal
+
+```mermaid
+graph TD
+    A[Raw Market Data] --> B{Data Ingestion (FastAPI)};
+    B --> C[Time-Series DB (TimescaleDB)];
+    C --> D{Pattern Detection Engine};
+    D --> E[Detected Pattern (Noise)];
+    E --> F{Scoring & Validation Engine};
+    F --> G[Validated Signal (Actionable)];
+
+    subgraph "Pro & Quant Confluence Factors"
+        H[✅ Market Structure] --> F;
+        I[✅ Order Flow] --> F;
+        J[✅ Derivatives Pressure] --> F;
+        K[✅ On-Chain Metrics] --> F;
+    end
+
+    G --> L[High Confidence Score (>=7)];
+    G --> M[Low Confidence Score (<7)];
+
+    L --> N[➡️ Actionable Alert];
+    M --> O[➡️ Discarded];
+```
+
 ## Scoring Components: How the Score is Calculated
 
 The final 1-10 score is not just one number. It is an aggregation of several independent scores, each analyzing a different aspect of the trade. The final score is built like this:

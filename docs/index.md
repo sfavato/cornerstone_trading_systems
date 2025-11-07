@@ -1,5 +1,19 @@
 # Introduction: How The Bot Works
 
+## The "Glass Box" Dashboard: Quantified Trust
+
+This dashboard provides a live, transparent view into the historical performance of our strategies. We believe in "Quantified Trust" over "accuracy" hype.
+
+<!-- Placeholder for the custom HTML/JavaScript block -->
+<div id="glass-box-dashboard">
+  <h3>Live Performance Metrics</h3>
+  <ul>
+    <li><strong>Equity Curve:</strong> Loading...</li>
+    <li><strong>Profit Factor:</strong> Loading...</li>
+    <li><strong>Max Drawdown:</strong> Loading...</li>
+  </ul>
+</div>
+
 The HarmoFinder Bot is a sophisticated algorithmic trading system. Its primary purpose is to identify, validate, and execute high-probability trading opportunities based on harmonic chart patterns.
 
 It's crucial to understand that the bot is not a simple signal generator. It is a multi-stage validation pipeline designed to filter out low-quality "noise" and only act on "A+" grade setups. The entire process can be broken down into three phases:
