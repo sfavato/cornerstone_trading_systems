@@ -1,4 +1,28 @@
-## Pattern vs. Signal: The Core Concept
+## Pattern vs. Signal: A Visual Comparison
+
+<ul class="grid cards" markdown>
+
+<li>
+### Detected Pattern (Low Confidence)
+**Confidence**: 🔴 Low (15/100)
+**Analysis**: Market Noise
+**Action**: Observe only
+</li>
+
+<li>
+### Validated Signal (High Confidence)
+**Confidence**: 🟢 High (85/100)
+**Analysis**: Actionable Trade Opportunity
+**Confluence Factors**:
+- ✅ Market Structure (Liquidity Zone)
+- ✅ Order Flow (CVD Divergence)
+- ✅ Derivatives Pressure (OI, Funding)
+- ✅ On-Chain Metrics (MVRV, SOPR)
+</li>
+
+</ul>
+
+## The Core Concept
 
 This is the most important distinction for stakeholders to understand. The bot separates "patterns" from "signals."
 

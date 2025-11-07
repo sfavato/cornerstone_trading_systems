@@ -51,15 +51,50 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+#-- Plugins
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago
+
+#-- Extra Features
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  feedback:
+    title: Was this page helpful?
+    ratings:
+      - icon: "😞"
+        name: "Not helpful"
+        data: 0
+        note: "Thanks for your feedback! We'll use it to improve this page."
+      - icon: "😊"
+        name: "Helpful"
+        data: 1
+        note: "Thanks for your feedback!"
+
 #-- Navigation Structure
 nav:
-  - 'Introduction': 'index.md'
-  - 'Getting Started': 'getting_started.md'
-  - 'Core Concepts':
-    - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
-    - 'The Confidence Score': 'core_concepts/confidence_score.md'
-  - 'User Guides':
-    - 'Final Entry Checks': 'guides/final_checks.md'
-    - 'Understanding Signals': 'guides/what_to_expect.md'
+  - 'Home': 'index.md'
+  - 'Freemium Journey':
+    - 'Getting Started': 'getting_started.md'
+    - 'Core Concepts':
+      - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
+      - 'The Confidence Score': 'core_concepts/confidence_score.md'
+  - 'Pro Journey':
+    - 'Trader''s Cookbook':
+      - 'Backtesting Signals': 'pro_journey/cookbook/backtesting_python.md'
+      - 'Risk Management': 'pro_journey/cookbook/risk_management.md'
+  - 'Quant Journey':
+    - 'API Reference':
+      - 'Data Endpoints': 'quant_journey/api/data_endpoints.md'
+      - 'Data Models': 'quant_journey/api/data_models.md'
+  - 'Resources':
+    - 'Alpha Glossary': 'resources/alpha_glossary.md'
   - 'Legal':
     - 'Risk Disclaimer': 'legal/risk_disclaimer.md'
