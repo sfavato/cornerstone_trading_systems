@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HarmoFinder Bot Documentation</title>
-    <!-- Load Tailwind CSS -->
+    <title>HarmoFinder User Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,12 +12,11 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Custom styles for ReadTheDoc look */
         .content-section {
-            scroll-margin-top: 4rem; /* Offset for sticky header */
+            scroll-margin-top: 4rem;
         }
         .prose h1, .prose h2, .prose h3 {
-            color: #1e3a8a; /* Dark blue */
+            color: #1e3a8a;
             font-weight: 700;
         }
         .prose h1 {
@@ -31,14 +28,14 @@
             padding-bottom: 0.5rem;
         }
         .prose code {
-            background-color: #eef2ff; /* Light indigo */
-            color: #4338ca; /* Indigo */
+            background-color: #eef2ff;
+            color: #4338ca;
             padding: 0.2rem 0.4rem;
             border-radius: 0.25rem;
             font-weight: 600;
         }
         .prose a {
-            color: #2563eb; /* Blue */
+            color: #2563eb;
             text-decoration: none;
         }
         .prose a:hover {
@@ -48,35 +45,23 @@
             display: block;
             padding: 0.5rem 1rem;
             border-left: 3px solid transparent;
-            color: #d1d5db; /* Gray 300 */
+            color: #d1d5db;
             font-weight: 500;
             transition: all 0.2s ease-in-out;
         }
         .sidebar-link:hover {
-            background-color: #374151; /* Gray 700 */
+            background-color: #374151;
             color: #ffffff;
-            border-left-color: #3b82f6; /* Blue 500 */
+            border-left-color: #3b82f6;
         }
         .sidebar-link.active {
-            background-color: #1f2937; /* Gray 800 */
+            background-color: #1f2937;
             color: #ffffff;
-            border-left-color: #3b82f6; /* Blue 500 */
+            border-left-color: #3b82f6;
         }
         .sidebar-sub-link {
             padding-left: 2rem;
             font-size: 0.875rem;
-        }
-        /* Style for the risk disclaimer */
-        .prose .disclaimer {
-            background-color: #fffbeb; /* Amber 50 */
-            border: 1px solid #fde68a; /* Amber 200 */
-            color: #b45309; /* Amber 700 */
-            padding: 1rem;
-            border-radius: 0.5rem;
-        }
-        .prose .disclaimer h3 {
-            color: #b45309; /* Amber 700 */
-            margin-top: 0;
         }
     </style>
 </head>
@@ -88,19 +73,14 @@
             <div class="p-4">
                 <h2 class="text-xl font-bold text-white">HarmoFinder Docs</h2>
             </div>
-            <!-- Sticky navigation for sidebar -->
             <div class="sticky top-0">
-                <a href="#introduction" class="sidebar-link active">Introduction</a>
-                <a href="#getting-started" class="sidebar-link">Getting Started</a>
-                <a href="#what-to-expect" class="sidebar-link">What to Expect</a>
-                <a href="#pattern-vs-signal" class="sidebar-link">Pattern vs. Signal</a>
-                <a href="#confidence-score" class="sidebar-link">The Confidence Score</a>
-                <a href="#score-components" class="sidebar-link">Scoring Components</a>
-                <a href="#geometric-purity" class="sidebar-link sidebar-sub-link">- Geometric Purity</a>
-                <a href="#market-confluence" class="sidebar-link sidebar-sub-link">- Market Confluence</a>
-                <a href="#ai-context-score" class="sidebar-link sidebar-sub-link">- AI Context Score</a>
-                <a href="#final-checks" class="sidebar-link">Final Entry Checks</a>
-                <a href="#risk-disclaimer" class="sidebar-link">Risk Disclaimer</a>
+                <a href="#welcome-login" class="sidebar-link">Welcome & Login</a>
+                <a href="#dashboard" class="sidebar-link">Your Dashboard</a>
+                <a href="#signals" class="sidebar-link">Our Signals</a>
+                <a href="#alpha" class="sidebar-link">Our "Alpha"</a>
+                <a href="#trade-management" class="sidebar-link">Smart Trade Management</a>
+                <a href="#market-indicators" class="sidebar-link">Proprietary Indicators</a>
+                <a href="#account-management" class="sidebar-link">Account Management</a>
             </div>
         </nav>
 
@@ -108,162 +88,122 @@
         <main class="flex-1 p-6 md:p-10">
             <div class="prose max-w-none">
 
-                <!-- Introduction Section -->
-                <section id="introduction" class="content-section">
-                    <h1>Introduction: How The Bot Works</h1>
-                    <p>The HarmoFinder Bot is a sophisticated algorithmic trading system. Its primary purpose is to identify, validate, and execute high-probability trading opportunities based on harmonic chart patterns.</p>
-                    <p>It's crucial to understand that the bot is not a simple signal generator. It is a multi-stage validation pipeline designed to filter out low-quality "noise" and only act on "A+" grade setups. The entire process can be broken down into three phases:</p>
-                    <ol>
-                        <li><strong>Detection (The "HarmoFinder"):</strong> The system scans hundreds of assets across multiple timeframes (4h, 1D, 3D) 24/7. Its goal is to identify the geometric structure of a "Detected Pattern" (e.g., a Gartley, Bat, or Deep Crab).</li>
-                        <li><strong>Validation (The "Confidence Engine"):</strong> This is the core of the system. Every Detected Pattern is immediately passed to a scoring engine. This engine assigns a <strong>Confidence Score (1-10)</strong> based on the pattern's quality, its location on the chart, and the underlying market context.</li>
-                        <li><strong>Execution (The "Trade Monitor"):</strong> Only patterns that achieve a high Confidence Score (e.g., 7/10 or higher) are promoted to a "Trade Signal." Before any order is placed, this signal must pass a final set of real-time filters for risk management and market regime.</li>
-                    </ol>
-                    <!-- Visual representation of the funnel -->
-                    <div class="bg-gray-50 p-4 rounded-lg my-4 text-center">
-                        <span class="font-bold text-lg text-gray-700">Detection</span>
-                        <div class="text-5xl text-blue-600">↓</div>
-                        <span class="font-bold text-lg text-gray-700">Validation (Confidence Score)</span>
-                        <div class="text-5xl text-blue-600">↓</div>
-                        <span class="font-bold text-lg text-gray-700">Execution (Final Checks)</span>
-                    </div>
+                <section id="welcome-login" class="content-section">
+                    <h1>📚 HarmoFinder User Documentation</h1>
+
+                    <h2>1. Welcome & Login</h2>
+                    <p>Welcome to HarmoFinder. To access the platform, we offer several secure login methods designed to match your preferences for privacy and simplicity.</p>
+                    <h3>Sign-In with Ethereum (SIWE)</h3>
+                    <p><strong>Who is it for?</strong> The "crypto-native" option, ideal for users who prioritize pseudonymity and security.</p>
+                    <p><strong>How it works:</strong> Use your wallet (e.g., MetaMask, Trust Wallet) to sign a message. You share no email, no password. Your wallet is your identity on our platform.</p>
+                    <h3>Social Login (Discord & Twitter/X)</h3>
+                    <p><strong>Who is it for?</strong> For users who want a fast, convenient login.</p>
+                    <p><strong>How it works:</strong> Use your Discord or X account to log in with one click. These platforms are at the heart of the Web3 ecosystem, and we offer them as practical, "crypto-aligned" alternatives.</p>
                 </section>
 
-                <!-- Getting Started Section -->
-                <section id="getting-started" class="content-section">
-                    <h2>Getting Started</h2>
-                    <p>Welcome to HarmoFinder. Here is the simple process for getting your account set up and ready to receive trading signals.</p>
-                    <ol>
-                        <li><strong>Log In:</strong> Access the platform using your credentials. We use a secure sign-in method to protect your account.</li>
-                        <li><strong>Connect Your Exchange:</strong> Navigate to the "Account" or "Settings" page. You will need to generate API keys from your preferred crypto exchange (e.g., Bitget, Binance). Follow the on-screen instructions to add your API keys. <em>(Note: For security, ensure API permissions are set to "Trade" and "Read" only. Never enable "Withdrawal" permissions.)</em></li>
-                        <li><strong>Configure Your Risk:</strong> In your dashboard, set your desired risk parameters. This typically includes "Risk per Trade" (e.g., 1% of your account) and "Max Leverage." The bot will use these settings to calculate position sizes automatically.</li>
-                        <li><strong>Enable Trading:</strong> Once configured, you can toggle the bot "On" from your main dashboard. The bot will now begin monitoring for new, high-confidence Trade Signals to execute on your behalf.</li>
-                    </ol>
-                </section>
-
-                <!-- What to Expect Section -->
-                <section id="what-to-expect" class="content-section">
-                    <h2>What to Expect (The Signals)</h2>
-                    <p>The HarmoFinder bot is a **high-timeframe (HTF)** system. This means it primarily operates on the 4-hour, 1-day, and 3-day charts. It is not a high-frequency (HFT) or scalping bot.</p>
+                <section id="dashboard" class="content-section">
+                    <h2>2. Your Dashboard (The indice_frontend)</h2>
+                    <p>Your dashboard is your command center. It's where you visualize the bot's work and track your performance.</p>
                     <ul>
-                        <li><strong>Patience is Key:</strong> You may not see a new trade every day. The bot is designed to be highly selective and will wait patiently—sometimes for days—for an "A+" setup that meets its strict Confidence Score threshold.</li>
-                        <li><strong>Signal Notifications:</strong> When a validated Trade Signal is detected, you will receive a notification (e.g., via Discord or Telegram). This notification will include the Asset, Direction (LONG/SHORT), Entry Price, Stop Loss, and Take Profit targets.</li>
-                        <li><strong>Trade Management:</strong> If you have auto-trading enabled, the bot will manage the trade for you, moving the stop loss to break-even at the appropriate time and taking profit at predefined targets.</li>
+                        <li><strong>Active Signals View:</strong> See all harmonic patterns the bot has detected that are currently being evaluated or are in an active trade.</li>
+                        <li><strong>Trade History:</strong> Analyze all past trades (wins, losses, invalidations) to understand performance and refine your strategy.</li>
+                        <li><strong>Performance Dashboard:</strong> Track your account's P&L, Win Rate, and other key performance metrics with clear visualizations.</li>
                     </ul>
                 </section>
 
-                <!-- Pattern vs. Signal Section -->
-                <section id="pattern-vs-signal" class="content-section">
-                    <h2>Pattern vs. Signal: The Core Concept</h2>
-                    <p>This is the most important distinction for stakeholders to understand. The bot separates "patterns" from "signals."</p>
-                    
-                    <h3>Detected Pattern</h3>
-                    <p>A <strong>Detected Pattern</strong> is simply raw material. It is a geometric shape that the `harmofinder` service has identified. The system may detect hundreds of these per day. Most are low-quality, "sloppy" patterns and are immediately discarded by the scoring engine. A Detected Pattern is <em>not</em> an instruction to trade.</p>
-
-                    <h3>Trade Signal</h3>
-                    <p>A <strong>Trade Signal</strong> is a high-quality, validated opportunity. It is a Detected Pattern that has successfully passed through the entire validation pipeline and received a high <strong>Confidence Score</strong>. Only these "A+" grade setups are passed to the `monitor_trades` service for potential execution.</p>
-
-                    <blockquote>
-                        <p><strong>Analogy:</strong> A <strong>Detected Pattern</strong> is like identifying a cloud that *looks* like a rain cloud. A <strong>Trade Signal</strong> is that same cloud, *plus* a confirmed 20-degree drop in temperature, a 90% humidity reading, and a rising wind. We only act on the signal, not the shape.</p>
-                    </blockquote>
+                <section id="signals" class="content-section">
+                    <h2>3. Our Signals: Pattern Detection</h2>
+                    <p>HarmoFinder doesn't just follow trends; it identifies complex price structures that predict market reversals with a high degree of probability.</p>
+                    <h3>Classic Harmonic Patterns (Standard Tier)</h3>
+                    <p><strong>What is it?</strong> Our core engine constantly scans the market for well-known XABCD patterns like the Gartley, Bat, Butterfly, and Cypher.</p>
+                    <p><strong>How it works?</strong> The bot uses a ZigZag algorithm to identify significant pivot points (X, A, B, C) and checks if they adhere to the specific Fibonacci ratios that define each pattern.</p>
+                    <h3>Advanced Patterns (GNN) (Expert/Quant Tier)</h3>
+                    <p><strong>What is it?</strong> This is our most advanced technology. Classic patterns are rigid; our AI (a Graph Neural Network, or GNN) is trained to recognize more subtle and complex price structures that don't fit a textbook model but have historically shown a high probability of success.</p>
+                    <p><strong>How it works?</strong> We transform price structures into "graphs" that our AI analyzes, allowing it to find opportunities that traditional scanners miss entirely.</p>
                 </section>
 
-                <!-- Confidence Score Section -->
-                <section id="confidence-score" class="content-section">
-                    <h2>The Confidence Score (1-10)</h2>
-                    <p>The Confidence Score is the final, aggregated grade (from 1 to 10) that the system assigns to a pattern *after* it has been detected. It answers one question: <strong>"What is the probability of this pattern succeeding right now, in the current market conditions?"</strong></p>
+                <section id="alpha" class="content-section">
+                    <h2>4. Our "Alpha": Confluence Filters</h2>
+                    <p>A pattern alone is a good start. A pattern validated by advanced market data is a high-conviction signal. This is our secret sauce for filtering out the noise.</p>
+                    <h3>The Confidence Score (Pro/Quant Tier)</h3>
+                    <p><strong>What is it?</strong> Your at-a-glance quality indicator for every signal. It tells you if the "smart money" and market sentiment align with the pattern.</p>
+                    <p><strong>How it works?</strong> This score (from 0 to 100) is an aggregate of two key derivative market metrics:</p>
                     <ul>
-                        <li><strong>Score 1-3:</strong> Very low quality. Ignored.</li>
-                        <li><strong>Score 4-6:</strong> Average quality. Ignored.</li>
-                        <li><strong>Score 7-10:</strong> High quality, validated "Trade Signal." Passed to the execution engine.</li>
+                        <li><strong>Open Interest (OI):</strong> We analyze OI momentum to see if new capital is flowing in to support the move.</li>
+                        <li><strong>Funding Rates (FR):</strong> We analyze funding rates to measure market sentiment (greed vs. fear).</li>
                     </ul>
-                    
-                    <h3>How it Impacts the Trade</h3>
-                    <p>The Confidence Score is the primary filter for the entire system. In the `monitor_trades` service, there is a hard filter called the <code>confidence_score_filter</code>. We configure a minimum threshold (e.g., <code>7</code>). Any pattern that does not meet this minimum score is automatically rejected and will never be traded.</p>
+                    <p><strong>Why it matters:</strong> A high score means capital flows and market sentiment confirm the pattern. This score is rigorously backtested to improve the Win Rate and Profit Factor.</p>
+                    <h3>The "Liquidity Magnet" Score (Quant Tier)</h3>
+                    <p><strong>What is it?</strong> Our most powerful filter. It checks if your pattern's entry zone (the PRZ) is sitting exactly on top of a "wall" of pending liquidations.</p>
+                    <p><strong>How it works?</strong> We use Coinglass "Liquidation Maps". Our bot calculates a score (from 0.0 to 1.0) that measures the density of potential liquidations within the PRZ compared to the surrounding area.</p>
+                    <p><strong>Why it matters:</strong> A high score (e.g., 0.8) means 80% of all nearby liquidity is concentrated in your entry zone. The pattern isn't just pointing to a technical level; it's pointing to the "fuel" for an imminent squeeze.</p>
+                    <h3>Gann Time Confluence (Pro/Quant Tier)</h3>
+                    <p><strong>What is it?</strong> Price is only half of the equation; time is the other half. This filter checks if a pattern is completing at a mathematically significant time.</p>
+                    <p><strong>How it works?</strong> The bot calculates Gann "Time Reversal Zones" (TRZ) , based on the time cycles from the pattern's X, A, B, and C points.</p>
+                    <p><strong>Why it matters:</strong> A signal forming in both a price PRZ and a time TRZ is a very high-probability setup. The bot even applies a leverage bonus for these "time-confluent" trades.</p>
+                    <h3>Standard Confluence Filters (All Tiers)</h3>
+                    <p>All our signals are also validated against a checklist of standard technical indicators, including RSI Divergence, MACD, Volume Profile (POC/VA), VWAP, and higher-timeframe trend alignment.</p>
                 </section>
 
-                <!-- Scoring Components Section -->
-                <section id="score-components" class="content-section">
-                    <h2>Scoring Components: How the Score is Calculated</h2>
-                    <p>The final 1-10 score is not just one number. It is an aggregation of several independent scores, each analyzing a different aspect of the trade. The final score is built like this:</p>
-                    <p class="bg-gray-100 p-3 rounded-md"><code>Final Score (1-10) = (Base Score from Geometric Purity) + (Market Confluence Bonus) + (AI Context Bonus/Penalty)</code></p>
-                </section>
-
-                <!-- Geometric Purity Section -->
-                <section id="geometric-purity" class="content-section">
-                    <h3>1. Geometric Purity Score (The Base Score)</h3>
-                    <p>This is the first and most fundamental score, calculated by the `harmofinder/scoring_engine.py`.</p>
+                <section id="trade-management" class="content-section">
+                    <h2>5. Smart Trade Management: The Bot's Brain</h2>
+                    <p>Our bot is not a simple alert service. It is an active trade manager that adapts to market conditions after a position is opened.</p>
+                    <h3>Dynamic Entries</h3>
+                    <p>The bot doesn't buy blindly. It waits for specific confirmations, such as a "15m Retest" of the zone, a "Near True Level" entry (the ideal Fibonacci ratio), or a "Near SL" entry (optimal risk/reward).</p>
+                    <h3>Adaptive Partial Exits (Pro/Quant Tier)</h3>
+                    <p>The bot reacts to real-time information:</p>
                     <ul>
-                        <li><strong>What it is:</strong> A score of the pattern's *technical perfection*.</li>
-                        <li><strong>How it's calculated:</strong> It measures how closely the pattern's Fibonacci ratios (the X, A, B, C, and D points) match the "textbook perfect" definition of that pattern. For example, a perfect Gartley pattern has its B-point at exactly the 0.618 retracement of the XA leg. A pattern with a B-point at 0.617 will receive a much higher purity score than one at 0.590.</li>
-                        <li><strong>Impact:</strong> This forms the base of the final score. A "sloppy" or geometrically "ugly" pattern will start with a low base score and is highly unlikely to ever become a Trade Signal.</li>
+                        <li><strong>MACD Confluence Failure:</strong> If the trade is open but MACD fails to confirm after the PRZ exit, the bot closes 50% of the position to reduce risk.</li>
+                        <li><strong>"True Fib" PRZ Exit:</strong> If you entered on a perfect Fibonacci level, the bot secures 30% in profit as soon as the price exits the entry zone.</li>
                     </ul>
-                </section>
-
-                <!-- Market Confluence Section -->
-                <section id="market-confluence" class="content-section">
-                    <h3>2. Market Confluence Score (The "Where")</h3>
-                    <p>This score answers *where* on the chart the pattern is completing. A pattern that completes at a major support/resistance level is far more reliable.</p>
+                    <h3>Dynamic Stop-Loss</h3>
                     <ul>
-                        <li><strong>What it is:</strong> A score measuring the pattern's alignment with high-volume structural levels.</li>
-                        <li><strong>How it's calculated:</strong> The system's `scoring_engine.py` (specifically the <code>calculate_volume_profile_score</code> function) checks the pattern's entry price (the D-point) against the **Volume Profile** of the asset.</li>
-                        <li><strong>Impact (Bonus System):</strong>
-                            <ul>
-                                <li><strong>High Bonus:</strong> Awarded if the D-point lands directly on the **Point of Control (POC)** (the highest-volume price level).</li>
-                                <li><strong>Medium Bonus:</strong> Awarded if the D-point lands on the **Value Area High (VAH)** or **Value Area Low (VAL)**.</li>
-                                <li><strong>No Bonus:</strong> Awarded if the pattern completes in a low-volume "dead zone."</li>
-                            </ul>
-                        </li>
+                        <li><strong>ATR Trailing Stop:</strong> Once in profit, the bot can activate an ATR (Average True Range) Trailing Stop, allowing it to lock in gains while giving the trade room to run.</li>
+                        <li><strong>Candle Rejection Exit:</strong> If the bot detects a strong rejection candle (e.g., a long wick) near the SL, it can close the position before the SL is hit to prevent slippage.</li>
                     </ul>
+                    <h3>Invalidation Handling (Quant Tier)</h3>
+                    <p><strong>Invalidation & Reversal:</strong> What happens if a trade hits its Stop-Loss? The bot doesn't just take the loss. It considers the pattern "invalidated" and automatically opens a trade in the opposite direction, trading on the assumption that the pattern's failure is, itself, a strong signal.</p>
+                    <p><strong>Double Invalidation:</strong> If the reversed trade also hits its SL, the bot closes the position for good. This is our "circuit breaker" for that pattern.</p>
+                    <h3>Hedging (Quant Tier)</h3>
+                    <p>When certain Take Profit (TP) levels are hit, the bot automatically opens a small hedge position in the opposite direction.</p>
+                    <p><strong>Why?</strong> This allows you to lock in a portion of your gains while keeping your main position open to target higher objectives, all without emotion.</p>
                 </section>
 
-                <!-- AI Context Score Section -->
-                <section id="ai-context-score" class="content-section">
-                    <h3>3. AI Context Score (The "When" / Exotic Alpha)</h3>
-                    <p>This is our proprietary "secret sauce" and a key part of the "deep research" from the `masterplan.txt`. This score answers, "is *now* a good time for this pattern to succeed?"</p>
+                <section id="market-indicators" class="content-section">
+                    <h2>6. Proprietary Market Indicators</h2>
+                    <p>Beyond trade signals, your dashboard gives you access to unique market gauges based on our internal research.</p>
+                    <h3>The Weekend Risk Indicator</h3>
+                    <p><strong>What is it?</strong> An indicator that alerts you when weekend trading conditions are particularly dangerous.</p>
+                    <p><strong>Why?</strong> Our research (based on the "Weekend Risk Hedging Strategy" document) has shown that weekend liquidity is often "illusory". The "bid walls" you see can evaporate , leading to flash crashes and liquidation cascades. This indicator helps you decide whether to reduce exposure before the weekend.</p>
+                    <h3>The Market "Squeeze Score"</h3>
+                    <p><strong>What is it?</strong> An indicator that scans the market for "powder kegs" ready to explode.</p>
+                    <p><strong>How it works?</strong> It identifies assets where a large number of traders are "trapped" on the wrong side (e.g., many shorts in a market that refuses to drop), combined with rising Open Interest and extreme Funding Rates.</p>
+                    <p><strong>Why?</strong> It helps you find high-volatility squeeze opportunities before they happen.</p>
+                    <h3>The "Peak Sentiment" Indicator</h3>
+                    <p><strong>What is it?</strong> A market "extreme greed" indicator.</p>
+                    <p><strong>How it works?</strong> It triggers when Open Interest (leverage) and Funding Rates (greed) hit extreme historical highs at the same time.</p>
+                    <p><strong>Why?</strong> It helps you know when it's time to take profits—not because of a technical signal, but because the market has become dangerously euphoric and a reversal is likely.</p>
+                </section>
+
+                <section id="account-management" class="content-section">
+                    <h2>7. Account Management & Security</h2>
+                    <h3>Customer Billing Portal</h3>
+                    <p>Manage your subscription with full autonomy. Our secure customer portal (powered by Stripe) allows you to:</p>
                     <ul>
-                        <li><strong>What it is:</strong> A predictive score from an AI model (XGBoost) trained on our historical trade data (`trade_journal`).</li>
-                        <li><strong>How it's trained:</strong> The `backtesting/train_model.py` script trained the model by analyzing thousands of past trades. It learned what "invisible" market conditions were present during winning trades versus losing trades.</li>
-                        <li><strong>How it's calculated (Live):</strong> The `update_indices/update_confidence_score.py` script runs periodically. It feeds the *live* market context into the AI model, which generates a score. This score is then fed into the final Confidence Score calculation.</li>
-                        <li><strong>Data Used (Exotic Alpha):</strong>
-                            <ul>
-                                <li><strong>Derivatives Data:</strong> Funding Rates, Open Interest, CVD, and Liquidation data.</li>
-                                <li><strong>On-Chain Data:</strong> Exchange Netflows, MVRV (Market Value to Realized Value), and Whale Accumulation.</li>
-                                <li><strong>Options Data:</strong> Put/Call Ratio.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Impact:</strong> This score acts as a powerful bonus or penalty. A geometrically perfect (Purity) pattern at a key level (Confluence) might *still* be rejected if the AI model detects that, for example, high funding rates and exchange inflows are strongly opposing the trade.</li>
+                        <li>Change your plan (e.g., upgrade from Pro to Quant).</li>
+                        <li>Update your payment methods.</li>
+                        <li>View and download your invoices.</li>
                     </ul>
-                </section>
-
-                <!-- Final Checks Section -->
-                <section id="final-checks" class="content-section">
-                    <h2>Final Entry Checks: The Execution Gateway</h2>
-                    <p>Even after a pattern receives a high Confidence Score (e.g., 8/10) and becomes a "Trade Signal," the `monitor_trades` service performs a final list of checks before placing an order. A signal must pass *all* of these filters:</p>
-                    <ol>
-                        <li><strong>Confidence Score Filter:</strong> Is the score <code>&gt; 7</code> (or the configured threshold)?</li>
-                        <li><strong>Market Regime Filter:</strong> Is the trade aligned with the broader market trend? The `market_regime_filter.py` will block a LONG trade, even if it has a high score, if the overall market is in a strong "Trending Down" regime.</li>
-                        <li><strong>Contextual Filters:</strong> Are there any immediate "red flags"? The `funding_rate_filter.py` or `liquidation_context_filter.py` can stop a trade if market conditions are dangerously volatile or skewed.</li>
-                        <li><strong>Risk Management Filter:</strong> Does the trade meet our internal Risk/Reward rules? The `calculation_logic.py` confirms the stop-loss is valid and calculates a safe position size based on our account equity.</li>
-                    </ol>
-                    <p class="font-bold text-lg text-blue-800">Only a signal that passes every single check in this entire funnel—from Detection to Purity to Confluence to AI Context to Final Filters—will result in an order being placed on the exchange.</p>
-                </section>
-
-                <!-- Risk Disclaimer Section -->
-                <section id="risk-disclaimer" class="content-section">
-                    <h2>Important: Risk Disclaimer</h2>
-                    <div class="disclaimer">
-                        <h3>High-Risk Investment Warning</h3>
-                        <p>Trading cryptocurrencies and financial derivatives carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade, you should carefully consider your investment objectives, level of experience, and risk appetite.</p>
-                        <p><strong>Past performance is not indicative of future results.</strong> All trading involves risk, and you should only invest money you can afford to lose.</p>
-                        <p>The HarmoFinder Bot is an automated tool and does not constitute financial advice. All decisions made by the bot are based on algorithms and historical data, which do not guarantee future performance. We are not liable for any losses incurred from using this software. By using this service, you acknowledge and accept the risks involved in automated trading.</p>
-                    </div>
+                    <h3>Account Security</h3>
+                    <p><strong>Single Session Policy:</strong> To protect your account, we enforce a "Force Logout" policy. We only allow one active session at a time. If you log in on a new device (like your phone), your previous session (on your laptop) will be logged out automatically.</p>
+                    <h3>Terms of Use (Fair Use)</h3>
+                    <p>To ensure a high-quality service and protect the value of our "Alpha" for all users, our terms of use explicitly forbid the reselling, scraping, or redistribution of our signals. This policy is essential for maintaining the integrity of the platform.</p>
                 </section>
 
             </div>
         </main>
     </div>
 
-    <!-- Simple JS for active sidebar link -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const sections = document.querySelectorAll(".content-section");
@@ -273,17 +213,19 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         navLinks.forEach(link => {
-                            link.classList.toggle("active", link.getAttribute("href").substring(1) === entry.target.id);
+                            link.classList.remove("active");
+                            if (link.getAttribute("href").substring(1) === entry.target.id) {
+                                link.classList.add("active");
+                            }
                         });
                     }
                 });
-            }, { rootMargin: "-50% 0px -50% 0px", threshold: 0.1 });
+            }, { rootMargin: "0px 0px -50% 0px", threshold: 0.1 });
 
             sections.forEach(section => {
                 observer.observe(section);
             });
 
-            // Smooth scroll
             navLinks.forEach(link => {
                 link.addEventListener("click", (e) => {
                     e.preventDefault();
@@ -292,15 +234,9 @@
                         behavior: "smooth",
                         block: "start"
                     });
-                    // Also update hash in URL
                     history.pushState(null, null, `#${targetId}`);
                 });
             });
-
-            // Set the first link as active by default
-            if (navLinks.length > 0) {
-                navLinks[0].classList.add("active");
-            }
         });
     </script>
 </body>
