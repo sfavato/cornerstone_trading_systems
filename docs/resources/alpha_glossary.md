@@ -10,3 +10,6 @@ This glossary defines the core "alpha" metrics that our system uses to generate 
 
 !!! note "Funding Rates"
     Funding Rates are periodic payments made between traders to keep the price of a perpetual futures contract in line with the underlying spot price. High positive funding rates suggest that a majority of traders are long and are paying a premium to maintain their positions, which can be a contrarian indicator. Conversely, high negative rates suggest a bearish sentiment.
+
+!!! note "Weekend Risk Score (WRS)"
+    The WRS is a proprietary HarmoFinder metric designed to quantify the systemic risk associated with low-liquidit trading sessions, typically observed during weekends in the crypto market. The score is an aggregate of several leading indicators, including but not limited to, the Estimated Leverage Ratio (ELR), Open Interest (OI) divergence, and volatility compression patterns. A high WRS score triggers predefined risk management protocols to protect capital.
