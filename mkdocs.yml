@@ -1,1 +1,65 @@
-site_name: 'HarmoFinder Bot Documentation'
+#-- Project Information
+site_name: 'HarmoFinder Docs'
+site_description: 'Official Documentation for the HarmoFinder Bot.'
+site_author: 'The HarmoFinder Team'
+site_url: 'https://docs.harmofinder.ai'
+
+#-- Repository
+repo_name: 'HarmoFinder/docs'
+repo_url: 'https://github.com/HarmoFinder/docs'
+edit_uri: 'edit/main/docs/'
+
+#-- Theme & Appearance
+theme:
+  name: 'material'
+  palette:
+    # Palette toggle for light vs dark mode
+    - scheme: default
+      primary: 'indigo'
+      accent: 'indigo'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'black'
+      accent: 'indigo'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github-alt
+
+#-- Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+#-- Navigation Structure
+nav:
+  - 'Introduction': 'index.md'
+  - 'Getting Started': 'getting_started.md'
+  - 'Core Concepts':
+    - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
+    - 'The Confidence Score': 'core_concepts/confidence_score.md'
+  - 'User Guides':
+    - 'Final Entry Checks': 'guides/final_checks.md'
+    - 'Understanding Signals': 'guides/what_to_expect.md'
+  - 'Legal':
+    - 'Risk Disclaimer': 'legal/risk_disclaimer.md'
