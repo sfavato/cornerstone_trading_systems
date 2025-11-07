@@ -17,3 +17,7 @@ Le tableau de bord est conçu pour aller au-delà des simples "taux de victoire"
 - **Analyse de Risque :** Avant de suivre une stratégie, évaluez son drawdown maximal pour vous assurer qu'il correspond à votre tolérance au risque.
 - **Optimisation de Filtre :** Utilisez le diagramme de distribution pour décider quel seuil de "Confidence Score" (ex: 70, 75, 80 ?) vous souhaitez exiger pour vos propres trades.
 - **Identifier les Régimes de Marché :** En filtrant par date, vous pouvez analyser comment la stratégie a performé pendant différentes conditions de marché (ex: bull market vs. bear market).
+
+!!! note "Note sur la Stratégie de Risque Weekend (WRS)"
+
+    Les périodes de "Risque Extrême" (WRS > 95) sont exclues des calculs de performance pour les trades LONG. Cette exclusion proactive vise à refléter notre approche de préservation du capital, ce qui peut activement contribuer à une réduction du Drawdown Maximal affiché.
