@@ -99,6 +99,7 @@ nav:
     - 'Trader''s Cookbook':
       - 'Backtesting Signals': 'pro_journey/cookbook/backtesting_python.md'
       - 'Risk Management': 'pro_journey/cookbook/risk_management.md'
+      - 'Weekend Risk Protocol': 'pro_journey/cookbook/weekend_risk.md'
   - 'Features':
     - 'Performance Dashboard': 'features/performance_dashboard.md'
     - 'Pine Script Generator': 'features/pine_script_generator.md'
