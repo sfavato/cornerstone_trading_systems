@@ -1,34 +1,34 @@
-# Architecture : Vue d'Ensemble des Microservices
+# Architecture: Microservices Overview
 
-Notre système est conçu comme un écosystème de microservices distribués, orchestrés via RabbitMQ et monitorés avec Prometheus/Grafana. Cette architecture garantit une haute disponibilité, une scalabilité horizontale et une isolation des pannes. Pour nos utilisateurs "Quant" qui interagissent avec notre API, comprendre cette architecture est essentiel pour évaluer la robustesse et la fiabilité de notre infrastructure.
+Our system is designed as an ecosystem of distributed microservices, orchestrated via RabbitMQ and monitored with Prometheus/Grafana. This architecture ensures high availability, horizontal scalability, and fault isolation. For our "Quant" users who interact with our API, understanding this architecture is essential to assess the robustness and reliability of our infrastructure.
 
-## Diagramme d'Architecture (C4 Model - Niveau 2)
+## Architecture Diagram (C4 Model - Level 2)
 
 ```mermaid
 graph TD
-    subgraph "Utilisateurs (API & UI)"
-        A[Interface Frontend (React)]
-        B[Clients API (Python/JS)]
+    subgraph "Users (API & UI)"
+        A[Frontend Interface (React)]
+        B[API Clients (Python/JS)]
     end
 
-    subgraph "Infrastructure Cloud (AWS)"
-        C[Gateway API (NGINX)]
-        D[Bus de Messages (RabbitMQ)]
+    subgraph "Cloud Infrastructure (AWS)"
+        C[API Gateway (NGINX)]
+        D[Message Bus (RabbitMQ)]
 
-        subgraph "Services CORE"
-            E[Service d'Ingestion de Données]
-            F[Service de Détection de Patterns (GNN)]
-            G[Service de Scoring de Confiance (XGBoost)]
+        subgraph "CORE Services"
+            E[Data Ingestion Service]
+            F[Pattern Detection Service (GNN)]
+            G[Confidence Scoring Service (XGBoost)]
         end
 
-        subgraph "Services de Support"
-            H[Service de Données Historiques]
-            I[Service de Monitoring de Trades]
-            J[Service de Notifications (WebSocket)]
+        subgraph "Support Services"
+            H[Historical Data Service]
+            I[Trade Monitoring Service]
+            J[Notification Service (WebSocket)]
         end
 
-        subgraph "Bases de Données"
-            K[Base de Données Time-Series (TimescaleDB)]
+        subgraph "Databases"
+            K[Time-Series Database (TimescaleDB)]
             L[Cache (Redis)]
         end
     end
@@ -37,37 +37,37 @@ graph TD
     B --> C
     C --> D
 
-    D -- "Nouvelles Données du Marché" --> E
+    D -- "New Market Data" --> E
     E --> K
 
-    D -- "Nouveau Candlestick" --> F
-    F -- "Pattern Détecté" --> D
+    D -- "New Candlestick" --> F
+    F -- "Pattern Detected" --> D
 
-    D -- "Pattern Détecté" --> G
-    G -- "Pattern Scoré" --> D
+    D -- "Pattern Detected" --> G
+    G -- "Pattern Scored" --> D
 
-    D -- "Signal Validé" --> I
-    I -- "Alerte de Trade" --> D
+    D -- "Validated Signal" --> I
+    I -- "Trade Alert" --> D
 
-    D -- "Alerte de Trade" --> J
+    D -- "Trade Alert" --> J
     J -- "Notification" --> A
 
-    G -- "Besoin de Données Historiques" --> H
+    G -- "Need Historical Data" --> H
     H --> K
 
-    G -- "Besoin de Contexte Rapide" --> L
+    G -- "Need Fast Context" --> L
 ```
 
-## Description des Services Clés
+## Key Service Descriptions
 
-- **Gateway API :** Le point d'entrée unique pour toutes les requêtes. Gère l'authentification (JWT), la limitation de débit (rate limiting) et le routage.
-- **Bus de Messages (RabbitMQ) :** Le cœur de notre architecture asynchrone. Permet aux services de communiquer de manière découplée, assurant qu'un pic de charge ou la panne d'un service n'entraîne pas une défaillance en cascade.
-- **Service de Détection de Patterns (GNN) :** Notre innovation principale. Au lieu de boucles `for` classiques, nous utilisons un Graph Neural Network (GNN) pour identifier les patterns harmoniques. Cela nous permet de détecter des variations de patterns plus complexes et de réduire considérablement les faux positifs.
-- **Service de Scoring de Confiance (XGBoost) :** Le service qui exécute notre modèle IA pour calculer le "Confidence Score". Il est isolé pour pouvoir être mis à jour et ré-entraîné indépendamment des autres composants.
-- **Base de Données Time-Series (TimescaleDB) :** Choisie pour sa performance dans l'ingestion et l'interrogation de grandes quantités de données de marché.
+- **API Gateway:** The single entry point for all requests. Manages authentication (JWT), rate limiting, and routing.
+- **Message Bus (RabbitMQ):** The core of our asynchronous architecture. Allows services to communicate in a decoupled manner, ensuring that a load spike or a service failure does not lead to a cascading failure.
+- **Pattern Detection Service (GNN):** Our main innovation. Instead of classic `for` loops, we use a Graph Neural Network (GNN) to identify harmonic patterns. This allows us to detect more complex pattern variations and significantly reduce false positives.
+- **Confidence Scoring Service (XGBoost):** The service that runs our AI model to calculate the "Confidence Score." It is isolated so it can be updated and retrained independently of other components.
+- **Time-Series Database (TimescaleDB):** Chosen for its performance in ingesting and querying large amounts of market data.
 
-## Implications pour les Développeurs API
+## Implications for API Developers
 
-- **Asynchronisme :** Ne vous attendez pas à une réponse synchrone immédiate pour les tâches complexes (ex: "scanner tous les actifs"). Vous soumettez une tâche et recevez un `task_id`. Vous devrez ensuite interroger un endpoint de "résultats" ou vous abonner à un webhook.
-- **Fiabilité :** Notre architecture est conçue pour une disponibilité de 99.9%. La défaillance d'un service de scoring, par exemple, n'arrêtera pas la détection de patterns.
-- **Scalabilité :** Si la latence augmente, nous pouvons simplement augmenter le nombre de "workers" pour un service spécifique (ex: plus de workers de scoring) sans perturber le reste du système.
+- **Asynchronicity:** Do not expect an immediate synchronous response for complex tasks (e.g., "scan all assets"). You submit a task and receive a `task_id`. You will then need to query a "results" endpoint or subscribe to a webhook.
+- **Reliability:** Our architecture is designed for 99.9% availability. The failure of a scoring service, for example, will not stop pattern detection.
+- **Scalability:** If latency increases, we can simply increase the number of "workers" for a specific service (e.g., more scoring workers) without disrupting the rest of the system.

@@ -1,15 +1,15 @@
-# Projections de Gann
+# Gann Projections
 
-Les Projections de Gann sont un outil d'analyse technique avancé pour les traders "Pro" et "Quant". Elles utilisent les principes géométriques et mathématiques de W.D. Gann pour identifier des niveaux de support et de résistance potentiels ainsi que des points de retournement de marché.
+Gann Projections are an advanced technical analysis tool for "Pro" and "Quant" traders. They use the geometric and mathematical principles of W.D. Gann to identify potential support and resistance levels as well as market turning points.
 
-## Ce que l'outil Fournit
+## What the Tool Provides
 
-Notre implémentation inclut les "Gann Boxes" et les "Gann Fans" qui sont automatiquement tracés depuis les points pivots significatifs (points A et D) de nos patterns harmoniques détectés.
+Our implementation includes "Gann Boxes" and "Gann Fans" that are automatically drawn from the significant pivot points (A and D points) of our detected harmonic patterns.
 
-- **Niveaux Clés :** L'interface affiche les niveaux de prix clés dérivés des angles de Gann (1x1, 1x2, 2x1, etc.).
-- **Zones Temporelles :** L'outil projette également des zones temporelles où la probabilité d'un retournement de tendance est plus élevée.
+- **Key Levels:** The interface displays key price levels derived from Gann angles (1x1, 1x2, 2x1, etc.).
+- **Time Zones:** The tool also projects time zones where the probability of a trend reversal is higher.
 
-## Cas d'Usage Stratégique
+## Strategic Use Cases
 
-- **Confirmation de Zones de Profit :** Utilisez les niveaux de Gann comme des objectifs de "Take Profit" plus confluents pour vos signaux de trading.
-- **Invalidation de Trade :** Si le prix casse un niveau de Gann majeur sans réaction, cela peut servir de signal précoce d'invalidation de votre idée de trade initiale.
+- **Profit Zone Confirmation:** Use Gann levels as more confluent "Take Profit" targets for your trading signals.
+- **Trade Invalidation:** If the price breaks a major Gann level without a reaction, it can serve as an early invalidation signal for your initial trade idea.

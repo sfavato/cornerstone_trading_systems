@@ -1,22 +1,22 @@
-# Générateur de Stratégie Pine Script
+# Pine Script Strategy Generator
 
-Cette fonctionnalité est un pont puissant entre notre plateforme et l'écosystème TradingView. Elle permet aux utilisateurs "Pro" et "Quant" de convertir une configuration de trading validée en un script de stratégie Pine Script fonctionnel en un seul clic.
+This feature is a powerful bridge between our platform and the TradingView ecosystem. It allows "Pro" and "Quant" users to convert a validated trading setup into a functional Pine Script strategy script in a single click.
 
-## Comment ça Marche
+## How It Works
 
-1.  **Identifier un Signal :** Depuis le tableau de bord, lorsque vous voyez un signal de trading avec un score de confiance élevé que vous souhaitez automatiser ou backtester vous-même...
-2.  **Cliquer sur "Générer Pine Script" :** Un bouton sur la carte du signal ouvre une modale.
-3.  **Copier-Coller dans TradingView :** Le code Pine Script généré peut être directement copié dans l'éditeur Pine de TradingView.
+1.  **Identify a Signal:** From the dashboard, when you see a trading signal with a high confidence score that you want to automate or backtest yourself...
+2.  **Click "Generate Pine Script":** A button on the signal card opens a modal.
+3.  **Copy-Paste into TradingView:** The generated Pine Script code can be directly copied into the TradingView Pine Editor.
 
-## Code Généré
+## Generated Code
 
-Le script inclut :
-- **Logique d'Entrée :** Les conditions exactes pour déclencher le trade.
-- **Niveaux de Stop-Loss et Take-Profit :** Basés sur les points pivots du pattern (A, D) et les ratios de Fibonacci.
-- **Filtres Optionnels :** Inclut des placeholders pour que les utilisateurs puissent ajouter leurs propres filtres (ex: `ma_filter = close > ta.sma(close, 200)`).
+The script includes:
+- **Entry Logic:** The exact conditions to trigger the trade.
+- **Stop-Loss and Take-Profit Levels:** Based on the pattern's pivot points (A, D) and Fibonacci ratios.
+- **Optional Filters:** Includes placeholders for users to add their own filters (e.g., `ma_filter = close > ta.sma(close, 200)`).
 
-## Cas d'Usage Stratégique
+## Strategic Use Cases
 
-- **Backtesting Personnalisé :** Testez rapidement la performance historique du setup sur différents actifs ou unités de temps dans TradingView.
-- **Création d'Alertes Complexes :** Utilisez le script comme base pour créer des alertes personnalisées dans TradingView qui correspondent à vos critères exacts.
-- **Intégration avec d'Autres Indicateurs :** Combinez la logique de nos patterns avec vos propres indicateurs propriétaires dans TradingView.
+- **Custom Backtesting:** Quickly test the historical performance of the setup on different assets or timeframes in TradingView.
+- **Creating Complex Alerts:** Use the script as a basis for creating custom alerts in TradingView that match your exact criteria.
+- **Integration with Other Indicators:** Combine the logic of our patterns with your own proprietary indicators in TradingView.

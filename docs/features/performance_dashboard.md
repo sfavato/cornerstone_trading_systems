@@ -1,18 +1,18 @@
-# Tableau de Bord de Performance ("Glass Box")
+# Performance Dashboard ("Glass Box")
 
-La confiance par la transparence est notre principe directeur. Le tableau de bord de performance n'est pas une simple vitrine marketing ; c'est un outil d'analyse en temps réel conçu pour les traders sérieux. Il offre une vue non filtrée et agrégée de la performance historique de **toutes** les stratégies de détection de patterns.
+Trust through transparency is our guiding principle. The performance dashboard is not just a marketing showcase; it's a real-time analysis tool designed for serious traders. It offers an unfiltered, aggregated view of the historical performance of **all** pattern detection strategies.
 
-## Métriques Clés Affichées
+## Key Metrics Displayed
 
-Le tableau de bord est conçu pour aller au-delà des simples "taux de victoire".
+The dashboard is designed to go beyond simple "win rates."
 
-- **Courbe de Capitaux (Equity Curve) :** Une visualisation de la croissance (ou de la décroissance) d'un capital de départ de 10 000 $, en tradant tous les signaux.
-- **Profit Factor :** Le ratio des profits bruts sur les pertes brutes. Une valeur supérieure à 1.0 indique une stratégie profitable.
-- **Drawdown Maximal :** La plus grande perte en pourcentage du pic au creux. C'est une mesure essentielle du risque.
-- **Diagramme de Distribution des Scores :** Un histogramme montrant la répartition des "Confidence Scores" (0-100) sur les trades historiques. Cela vous aide à visualiser quel seuil de score a été le plus profitable.
-- **Filtrage par Actif / Unité de Temps :** Permet aux utilisateurs d'analyser la performance sur des marchés spécifiques (ex: BTC/USD vs. ETH/USD).
+- **Equity Curve:** A visualization of the growth (or decline) of a $10,000 starting capital, trading all signals.
+- **Profit Factor:** The ratio of gross profits to gross losses. A value greater than 1.0 indicates a profitable strategy.
+- **Maximum Drawdown:** The largest peak-to-trough percentage loss. This is an essential measure of risk.
+- **Score Distribution Chart:** A histogram showing the distribution of "Confidence Scores" (0-100) on historical trades. This helps you visualize which score threshold has been the most profitable.
+- **Filtering by Asset / Timeframe:** Allows users to analyze performance on specific markets (e.g., BTC/USD vs. ETH/USD).
 
-## Comment l'Utiliser
+## How to Use It
 
 - **Analyse de Risque :** Avant de suivre une stratégie, évaluez son drawdown maximal pour vous assurer qu'il correspond à votre tolérance au risque.
 - **Optimisation de Filtre :** Utilisez le diagramme de distribution pour décider quel seuil de "Confidence Score" (ex: 70, 75, 80 ?) vous souhaitez exiger pour vos propres trades.
@@ -21,3 +21,6 @@ Le tableau de bord est conçu pour aller au-delà des simples "taux de victoire"
 !!! note "Note sur la Stratégie de Risque Weekend (WRS)"
 
     Les périodes de "Risque Extrême" (WRS > 95) sont exclues des calculs de performance pour les trades LONG. Cette exclusion proactive vise à refléter notre approche de préservation du capital, ce qui peut activement contribuer à une réduction du Drawdown Maximal affiché.
+- **Risk Analysis:** Before following a strategy, evaluate its maximum drawdown to ensure it aligns with your risk tolerance.
+- **Filter Optimization:** Use the distribution chart to decide which "Confidence Score" threshold (e.g., 70, 75, 80?) you want to require for your own trades.
+- **Identify Market Regimes:** By filtering by date, you can analyze how the strategy has performed during different market conditions (e.g., bull market vs. bear market).
