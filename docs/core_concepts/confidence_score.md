@@ -1,38 +1,38 @@
-# Le "Confidence Score" (0-100)
+# The "Confidence Score" (0-100)
 
-Le "Confidence Score" est la note finale et agrégée (de 0 à 100) que le système attribue à un pattern après sa détection. Il répond à une question : **"Quelle est la probabilité que ce pattern réussisse maintenant, dans les conditions de marché actuelles ?"**
+The "Confidence Score" is the final, aggregated rating (from 0 to 100) that the system assigns to a pattern after its detection. It answers one question: **"What is the probability of this pattern succeeding right now, in the current market conditions?"**
 
-- **Score 0-40 :** Très faible qualité. Ignoré.
-- **Score 41-69 :** Qualité moyenne. Potentiel pour une analyse manuelle mais généralement ignoré par le bot.
-- **Score 70-100 :** Haute qualité, "Signal de Trade" validé. Transmis au moteur d'exécution.
+- **Score 0-40:** Very low quality. Ignored.
+- **Score 41-69:** Average quality. Potential for manual analysis but generally ignored by the bot.
+- **Score 70-100:** High quality, validated "Trade Signal." Sent to the execution engine.
 
-Le seuil de 70 est notre référence par défaut, mais les utilisateurs "Pro" et "Quant" peuvent ajuster ce filtre via l'API.
+The 70 threshold is our default benchmark, but "Pro" and "Quant" users can adjust this filter via the API.
 
-## Composants du Score : Comment il est Calculé
+## Score Components: How It's Calculated
 
-Le score final de 0-100 est une agrégation de plusieurs scores indépendants.
-`Score Final (0-100) = (Score de Pureté Géométrique) + (Bonus de Confluence de Marché) + (Bonus/Malus de Contexte IA)`
+The final 0-100 score is an aggregation of several independent scores.
+`Final Score (0-100) = (Geometric Purity Score) + (Market Confluence Bonus) + (AI Context Bonus/Penalty)`
 
-### 1. Score de Pureté Géométrique (La Base)
+### 1. Geometric Purity Score (The Base)
 
-- **Description :** Une note sur la perfection technique du pattern.
-- **Calcul :** Mesure la proximité des ratios de Fibonacci (points X, A, B, C, D) avec la définition "parfaite" du pattern. Un Gartley avec un point B à 0.617 aura un score de pureté bien plus élevé qu'un autre à 0.590.
-- **Impact :** Constitue la base du score. Un pattern "brouillon" commence avec une base faible et a peu de chances de devenir un Signal de Trade.
+- **Description:** A score of the pattern's technical perfection.
+- **Calculation:** Measures the proximity of the Fibonacci ratios (X, A, B, C, D points) to the "perfect" definition of the pattern. A Gartley with a B point at 0.617 will have a much higher purity score than one at 0.590.
+- **Impact:** Forms the basis of the score. A "sloppy" pattern starts with a low base and is unlikely to become a Trade Signal.
 
-### 2. Score de Confluence de Marché (Le "Où")
+### 2. Market Confluence Score (The "Where")
 
-- **Description :** Analyse où sur le graphique le pattern se termine. Un pattern se formant sur un niveau de structure majeur est plus fiable.
-- **Composants :**
-    - **Alignement Volume Profile :** Vérifie le prix d'entrée (point D) par rapport au Volume Profile. Un bonus est accordé si le point D atterrit sur le Point of Control (POC), le Value Area High (VAH) ou le Value Area Low (VAL).
-    - **Divergence RSI :** Vérifie la présence d'une divergence (classique ou cachée) du RSI sur l'unité de temps du pattern, indiquant un affaiblissement du momentum contraire.
-    - **Localisation VWAP :** Compare le prix d'entrée au VWAP (Volume-Weighted Average Price). Un pattern haussier se formant au-dessus du VWAP est considéré comme plus fort.
-    - **Tendance de Fond (HTF) :** Analyse si le pattern est en accord avec la tendance de l'unité de temps supérieure (Higher-Timeframe) pour un meilleur filtrage.
+- **Description:** Analyzes where on the chart the pattern completes. A pattern forming at a major structure level is more reliable.
+- **Components:**
+    - **Volume Profile Alignment:** Checks the entry price (D point) against the Volume Profile. A bonus is given if the D point lands on the Point of Control (POC), Value Area High (VAH), or Value Area Low (VAL).
+    - **RSI Divergence:** Checks for the presence of a classic or hidden RSI divergence on the pattern's timeframe, indicating a weakening of the opposing momentum.
+    - **VWAP Location:** Compares the entry price to the VWAP (Volume-Weighted Average Price). A bullish pattern forming above the VWAP is considered stronger.
+    - **HTF Trend:** Analyzes if the pattern aligns with the trend of the Higher-Timeframe for better filtering.
 
-### 3. Score de Contexte IA (Le "Quand" / Alpha Exotique)
+### 3. AI Context Score (The "When" / Exotic Alpha)
 
-- **Description :** Notre "sauce secrète". Un score prédictif issu d'un modèle IA (XGBoost) entraîné sur nos données historiques pour répondre à la question : "Maintenant est-ce un bon moment pour que ce pattern réussisse ?"
-- **Données Analysées :**
-    - **Données de Dérivés :** Taux de Financement (Funding Rates), Open Interest, CVD, et Données de Liquidation.
-    - **Données On-Chain :** Flux Nets des Echanges (Exchange Netflows), MVRV (Market Value to Realized Value).
-    - **Données d'Options :** Ratio Put/Call.
-- **Impact :** Agit comme un bonus ou un malus puissant. Un pattern parfait (Pureté) sur un niveau clé (Confluence) peut quand même être rejeté si l'IA détecte que des conditions de marché (ex: funding trop élevé) s'opposent fortement au trade.
+- **Description:** Our "secret sauce." A predictive score from an AI model (XGBoost) trained on our historical data to answer the question: "Is now a good time for this pattern to succeed?"
+- **Data Analyzed:**
+    - **Derivatives Data:** Funding Rates, Open Interest, CVD, and Liquidation Data.
+    - **On-Chain Data:** Exchange Netflows, MVRV (Market Value to Realized Value).
+    - **Options Data:** Put/Call Ratio.
+- **Impact:** Acts as a powerful bonus or penalty. A perfect pattern (Purity) at a key level (Confluence) can still be rejected if the AI detects that market conditions (e.g., excessively high funding) are strongly opposing the trade.
