@@ -12,6 +12,7 @@ edit_uri: 'edit/main/docs/'
 #-- Theme & Appearance
 theme:
   name: 'material'
+  language: en
   palette:
     # Palette toggle for light vs dark mode
     - scheme: default
@@ -53,12 +54,20 @@ markdown_extensions:
 
 #-- Plugins
 plugins:
-  - search
+  - search:
+      lang: ['en', 'fr']
   - git-revision-date-localized:
       type: timeago
 
 #-- Extra Features
 extra:
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Français
+      link: /fr/
+      lang: fr
   consent:
     title: Cookie consent
     description: >-
@@ -90,10 +99,16 @@ nav:
     - 'Trader''s Cookbook':
       - 'Backtesting Signals': 'pro_journey/cookbook/backtesting_python.md'
       - 'Risk Management': 'pro_journey/cookbook/risk_management.md'
+  - 'Features':
+    - 'Performance Dashboard': 'features/performance_dashboard.md'
+    - 'Pine Script Generator': 'features/pine_script_generator.md'
+    - 'Gann Projections': 'features/gann_projections.md'
+    - 'Fundamental Analysis': 'features/fundamental_analysis.md'
   - 'Quant Journey':
     - 'API Reference':
       - 'Data Endpoints': 'quant_journey/api/data_endpoints.md'
       - 'Data Models': 'quant_journey/api/data_models.md'
+    - 'Architecture': 'quant_journey/architecture.md'
   - 'Resources':
     - 'Alpha Glossary': 'resources/alpha_glossary.md'
   - 'Legal':
