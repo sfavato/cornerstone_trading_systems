@@ -66,6 +66,18 @@
             padding-left: 2rem;
             font-size: 0.875rem;
         }
+        /* Style for the risk disclaimer */
+        .prose .disclaimer {
+            background-color: #fffbeb; /* Amber 50 */
+            border: 1px solid #fde68a; /* Amber 200 */
+            color: #b45309; /* Amber 700 */
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .prose .disclaimer h3 {
+            color: #b45309; /* Amber 700 */
+            margin-top: 0;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -79,6 +91,8 @@
             <!-- Sticky navigation for sidebar -->
             <div class="sticky top-0">
                 <a href="#introduction" class="sidebar-link active">Introduction</a>
+                <a href="#getting-started" class="sidebar-link">Getting Started</a>
+                <a href="#what-to-expect" class="sidebar-link">What to Expect</a>
                 <a href="#pattern-vs-signal" class="sidebar-link">Pattern vs. Signal</a>
                 <a href="#confidence-score" class="sidebar-link">The Confidence Score</a>
                 <a href="#score-components" class="sidebar-link">Scoring Components</a>
@@ -86,6 +100,7 @@
                 <a href="#market-confluence" class="sidebar-link sidebar-sub-link">- Market Confluence</a>
                 <a href="#ai-context-score" class="sidebar-link sidebar-sub-link">- AI Context Score</a>
                 <a href="#final-checks" class="sidebar-link">Final Entry Checks</a>
+                <a href="#risk-disclaimer" class="sidebar-link">Risk Disclaimer</a>
             </div>
         </nav>
 
@@ -111,6 +126,29 @@
                         <div class="text-5xl text-blue-600">↓</div>
                         <span class="font-bold text-lg text-gray-700">Execution (Final Checks)</span>
                     </div>
+                </section>
+
+                <!-- Getting Started Section -->
+                <section id="getting-started" class="content-section">
+                    <h2>Getting Started</h2>
+                    <p>Welcome to HarmoFinder. Here is the simple process for getting your account set up and ready to receive trading signals.</p>
+                    <ol>
+                        <li><strong>Log In:</strong> Access the platform using your credentials. We use a secure sign-in method to protect your account.</li>
+                        <li><strong>Connect Your Exchange:</strong> Navigate to the "Account" or "Settings" page. You will need to generate API keys from your preferred crypto exchange (e.g., Bitget, Binance). Follow the on-screen instructions to add your API keys. <em>(Note: For security, ensure API permissions are set to "Trade" and "Read" only. Never enable "Withdrawal" permissions.)</em></li>
+                        <li><strong>Configure Your Risk:</strong> In your dashboard, set your desired risk parameters. This typically includes "Risk per Trade" (e.g., 1% of your account) and "Max Leverage." The bot will use these settings to calculate position sizes automatically.</li>
+                        <li><strong>Enable Trading:</strong> Once configured, you can toggle the bot "On" from your main dashboard. The bot will now begin monitoring for new, high-confidence Trade Signals to execute on your behalf.</li>
+                    </ol>
+                </section>
+
+                <!-- What to Expect Section -->
+                <section id="what-to-expect" class="content-section">
+                    <h2>What to Expect (The Signals)</h2>
+                    <p>The HarmoFinder bot is a **high-timeframe (HTF)** system. This means it primarily operates on the 4-hour, 1-day, and 3-day charts. It is not a high-frequency (HFT) or scalping bot.</p>
+                    <ul>
+                        <li><strong>Patience is Key:</strong> You may not see a new trade every day. The bot is designed to be highly selective and will wait patiently—sometimes for days—for an "A+" setup that meets its strict Confidence Score threshold.</li>
+                        <li><strong>Signal Notifications:</strong> When a validated Trade Signal is detected, you will receive a notification (e.g., via Discord or Telegram). This notification will include the Asset, Direction (LONG/SHORT), Entry Price, Stop Loss, and Take Profit targets.</li>
+                        <li><strong>Trade Management:</strong> If you have auto-trading enabled, the bot will manage the trade for you, moving the stop loss to break-even at the appropriate time and taking profit at predefined targets.</li>
+                    </ul>
                 </section>
 
                 <!-- Pattern vs. Signal Section -->
@@ -210,6 +248,17 @@
                     <p class="font-bold text-lg text-blue-800">Only a signal that passes every single check in this entire funnel—from Detection to Purity to Confluence to AI Context to Final Filters—will result in an order being placed on the exchange.</p>
                 </section>
 
+                <!-- Risk Disclaimer Section -->
+                <section id="risk-disclaimer" class="content-section">
+                    <h2>Important: Risk Disclaimer</h2>
+                    <div class="disclaimer">
+                        <h3>High-Risk Investment Warning</h3>
+                        <p>Trading cryptocurrencies and financial derivatives carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade, you should carefully consider your investment objectives, level of experience, and risk appetite.</p>
+                        <p><strong>Past performance is not indicative of future results.</strong> All trading involves risk, and you should only invest money you can afford to lose.</p>
+                        <p>The HarmoFinder Bot is an automated tool and does not constitute financial advice. All decisions made by the bot are based on algorithms and historical data, which do not guarantee future performance. We are not liable for any losses incurred from using this software. By using this service, you acknowledge and accept the risks involved in automated trading.</p>
+                    </div>
+                </section>
+
             </div>
         </main>
     </div>
@@ -247,6 +296,11 @@
                     history.pushState(null, null, `#${targetId}`);
                 });
             });
+
+            // Set the first link as active by default
+            if (navLinks.length > 0) {
+                navLinks[0].classList.add("active");
+            }
         });
     </script>
 </body>
