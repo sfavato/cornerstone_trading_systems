@@ -98,7 +98,9 @@ extra:
         - 'Trader''s Cookbook':
           - 'Backtesting Signals': 'pro_journey/cookbook/backtesting_python.md'
           - 'Risk Management': 'pro_journey/cookbook/risk_management.md'
+          - 'Weekend Risk Protocol': 'pro_journey/cookbook/weekend_risk.md'
       - 'Features':
+        - 'HarmoGrid': 'features/harmogrid.md'
         - 'Performance Dashboard': 'features/performance_dashboard.md'
         - 'Pine Script Generator': 'features/pine_script_generator.md'
         - 'Gann Projections': 'features/gann_projections.md'
@@ -124,6 +126,7 @@ extra:
         - 'Recettes du Trader':
           - 'Backtester les Signaux': 'pro_journey/cookbook/backtesting_python.md'
           - 'Gestion du Risque': 'pro_journey/cookbook/risk_management.md'
+          - 'Protocole Risque Weekend': 'pro_journey/cookbook/weekend_risk.md'
       - 'Fonctionnalités':
         - 'HarmoGrid': 'features/harmogrid.md'
         - 'Tableau de Bord de Performance': 'features/performance_dashboard.md'
