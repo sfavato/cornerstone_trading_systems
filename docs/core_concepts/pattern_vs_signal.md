@@ -28,7 +28,7 @@ This is the most important distinction for stakeholders to understand. The bot s
 
 ### Detected Pattern
 
-A **Detected Pattern** is simply raw material. It is a geometric shape that the `harmofinder` service has identified. The system may detect hundreds of these per day. Most are low-quality, "sloppy" patterns and are immediately discarded by the scoring engine. A Detected Pattern is *not* an instruction to trade.
+A **Detected Pattern** is simply raw material. It is a geometric shape that the `cornerstone_detector` service has identified. The system may detect hundreds of these per day. Most are low-quality, "sloppy" patterns and are immediately discarded by the scoring engine. A Detected Pattern is *not* an instruction to trade.
 
 ### Trade Signal
 
