@@ -1,42 +1,36 @@
-# Comprendre le Protocole 'Risque Weekend' (WRS)
+# Understanding the Weekend Risk Protocol (WRS)
 
-Le marché des cryptomonnaies ne dort jamais, mais sa nature change radicalement le weekend. Cette page explique comment HarmoFinder gère proactivement les risques associés à ces changements de dynamique.
+The cryptocurrency market never sleeps, but its nature changes dramatically over the weekend. This page explains how HarmoFinder proactively manages the risks associated with these dynamic shifts.
 
----
+## For the Pro Trader: Your Insurance Against "Flash Crashes"
 
-### Pour le Trader Pro : Votre Assurance Contre les "Flash Crashs"
+**The Key Message:** "The crypto market changes on weekends. Institutional liquidity disappears, making the market fragile and prone to 'flash crashes.' Our bot knows this. The 'Intelligent Circuit Breaker' is your insurance: it reduces exposure or secures capital before these violent drops occur."
 
-**Le Message Clé :** "Le marché crypto change le weekend. La liquidité institutionnelle disparaît, rendant le marché fragile et sujet aux 'flash crashs'. Notre bot le sait. Le 'Disjoncteur Intelligent' est votre assurance : il réduit l'exposition ou sécurise le capital avant que ces chutes violentes ne se produisent."
+The "Intelligent Circuit Breaker" is a safety protocol designed to protect you. Based on our "Weekend Risk Score" (WRS), it activates defensive measures when the risk of a sudden, violent downturn increases.
 
-Le "Disjoncteur Intelligent" est un protocole de sécurité conçu pour vous protéger. Basé sur notre "Weekend Risk Score" (WRS), il active des mesures défensives lorsque le risque d'une baisse soudaine et violente augmente.
+There are two levels of intervention:
 
-Il existe deux niveaux d'intervention :
+*   **Level 1: Filter (High Risk)**
+    *   **What you see:** A "New LONG trades disabled" message appears on your dashboard.
+    *   **Why it's smart:** The system anticipates a possible cascade of liquidations. By suspending new purchases, it avoids entering the market at a moment of maximum vulnerability, protecting you from buying just before a crash.
+*   **Level 2: Circuit Breaker (Extreme Risk)**
+    *   **What you see:** A notification informs you that your LONG positions have been closed.
+    *   **Why it's necessary:** At this level, the system believes a "flash crash" is imminent. The absolute priority is capital preservation. Actively closing your positions is a last-resort measure to secure your gains and limit losses before the market drops violently.
 
-*   **Niveau 1 : Filtre (Risque Élevé)**
-    *   **Ce que vous voyez :** Un message "Nouveaux trades LONG désactivés" apparaît sur votre tableau de bord.
-    *   **Pourquoi c'est intelligent :** Le système anticipe une possible cascade de liquidations. En suspendant les nouveaux achats, il évite d'entrer sur le marché à un moment de vulnérabilité maximale, vous protégeant ainsi d'un achat juste avant une chute.
+## For the Quant Analyst: The "Weekend Risk Score" (WRS) Methodology
 
-*   **Niveau 2 : Disjoncteur (Risque Extrême)**
-    *   **Ce que vous voyez :** Une notification vous informe que vos positions LONG ont été clôturées.
-    *   **Pourquoi c'est nécessaire :** À ce niveau, le système estime qu'un "flash crash" est imminent. La priorité absolue est la préservation du capital. La clôture active de vos positions est une mesure de dernier recours pour sécuriser vos gains et limiter les pertes avant que le marché ne décroche violemment.
+**The Key Message:** "We have quantified the 'Weekend Effect.' The system calculates a 'Weekend Risk Score' (WRS) based on leverage predictors (ELR, OI Divergence, Funding Rates) and magnitude multipliers (Volatility Squeeze, CME Gap). This page explains the logic behind the system's filtering or closing actions."
 
----
+The WRS is a proprietary metric designed to assess systemic risk specific to weekends. It is calculated on Friday evening and aggregates several key indicators to anticipate market fragility.
 
-### Pour l'Analyste Quant : La Méthodologie du "Weekend Risk Score" (WRS)
+### The Components of the WRS:
 
-**Le Message Clé :** "Nous avons quantifié 'l'Effet Weekend'. Le système calcule un 'Weekend Risk Score' (WRS) basé sur des prédicteurs de levier (ELR, Divergence OI, Taux de Financement) et des multiplicateurs de magnitude (Squeeze de Volatilité, Gap CME). Cette page explique la logique derrière les actions de filtrage ou de clôture du système."
+1.  **Leverage Predictors:**
+    *   **Estimated Leverage Ratio (ELR):** A high ratio indicates an over-leveraged market, vulnerable to a cascade of liquidations.
+    *   **Open Interest (OI) vs. Price Divergence:** A divergence where OI increases while the price stagnates or falls signals an accumulation of positions that could be liquidated en masse.
+    *   **Funding Rates:** Excessively high or negative rates can indicate tension in the leverage market.
+2.  **Magnitude Multipliers:**
+    *   **Volatility Squeeze:** A period of extremely low volatility (as measured by the width of Bollinger Bands, for example) often precedes a violent expansion.
+    *   **CME Gap:** The presence of an unfilled "gap" on CME Bitcoin futures can act as a magnet on the price, increasing the risk of sharp movements when traditional markets reopen.
 
-Le WRS est une métrique propriétaire conçue pour évaluer le risque systémique spécifique aux fins de semaine. Il est calculé le vendredi soir et agrège plusieurs indicateurs clés pour anticiper la fragilité du marché.
-
-**Les Composants du WRS :**
-
-1.  **Prédicteurs de Levier :**
-    *   **Estimated Leverage Ratio (ELR) :** Un ratio élevé indique un marché sur-endetté, vulnérable à une cascade de liquidations.
-    *   **Divergence Open Interest (OI) vs. Prix :** Une divergence où l'OI augmente alors que le prix stagne ou baisse signale une accumulation de positions qui pourraient être liquidées en masse.
-    *   **Taux de Financement (Funding Rates) :** Des taux excessivement élevés ou négatifs peuvent indiquer une tension sur le marché du levier.
-
-2.  **Multiplicateurs de Magnitude :**
-    *   **Squeeze de Volatilité :** Une période de volatilité extrêmement basse (mesurée par la largeur des bandes de Bollinger, par exemple) précède souvent une expansion violente.
-    *   **Gap CME :** La présence d'un "gap" non comblé sur les contrats à terme du CME Bitcoin peut agir comme un aimant sur le prix, augmentant le risque de mouvements brusques à la réouverture des marchés traditionnels.
-
-Le WRS combine ces facteurs pour générer un score de risque. Lorsque ce score dépasse des seuils prédéfinis, le "Disjoncteur Intelligent" active les protocoles de filtrage (Niveau 1) ou de clôture active (Niveau 2) pour gérer l'exposition de manière algorithmique.
+The WRS combines these factors to generate a risk score. When this score exceeds predefined thresholds, the "Intelligent Circuit Breaker" activates the filtering (Level 1) or active closing (Level 2) protocols to manage exposure algorithmically.

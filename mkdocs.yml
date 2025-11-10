@@ -86,34 +86,58 @@ extra:
         name: "Helpful"
         data: 1
         note: "Thanks for your feedback!"
-
-#-- Navigation Structure
-nav:
-  - 'Home': 'index.md'
-  - 'Freemium Journey':
-    - 'Core Concepts':
-      - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
-      - 'The Confidence Score': 'core_concepts/confidence_score.md'
-    - 'Guides':
-      - 'What to Expect': 'guides/what_to_expect.md'
-      - 'Final Checks': 'guides/final_checks.md'
-  - 'Pro Journey':
-    - 'Trader''s Cookbook':
-      - 'Backtesting Signals': 'pro_journey/cookbook/backtesting_python.md'
-      - 'Risk Management': 'pro_journey/cookbook/risk_management.md'
-      - 'Weekend Risk Protocol': 'pro_journey/cookbook/weekend_risk.md'
-  - 'Features':
-    - 'Performance Dashboard': 'features/performance_dashboard.md'
-    - 'Pine Script Generator': 'features/pine_script_generator.md'
-    - 'Gann Projections': 'features/gann_projections.md'
-    - 'Fundamental Analysis': 'features/fundamental_analysis.md'
-  - 'Quant Journey':
-    - 'API Reference':
-      - 'Data Endpoints': 'quant_journey/api/data_endpoints.md'
-      - 'Data Models': 'quant_journey/api/data_models.md'
-    - 'Architecture': 'quant_journey/architecture.md'
-  - 'Resources':
-    - 'Alpha Glossary': 'resources/alpha_glossary.md'
-    - 'Tooltips': 'resources/tooltips.md'
-  - 'Legal':
-    - 'Risk Disclaimer': 'legal/risk_disclaimer.md'
+  en:
+    nav:
+      - 'Home': 'index.md'
+      - 'Freemium Journey':
+      - 'Core Concepts':
+          - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
+          - 'The Confidence Score': 'core_concepts/confidence_score.md'
+      - 'Pro Journey':
+        - 'Trader''s Cookbook':
+          - 'Backtesting Signals': 'pro_journey/cookbook/backtesting_python.md'
+          - 'Risk Management': 'pro_journey/cookbook/risk_management.md'
+          - 'Weekend Risk Protocol': 'pro_journey/cookbook/weekend_risk.md'
+      - 'Features':
+        - 'HarmoGrid': 'features/harmogrid.md'
+        - 'Performance Dashboard': 'features/performance_dashboard.md'
+        - 'Pine Script Generator': 'features/pine_script_generator.md'
+        - 'Gann Projections': 'features/gann_projections.md'
+        - 'Fundamental Analysis': 'features/fundamental_analysis.md'
+      - 'Quant Journey':
+        - 'API Reference':
+          - 'Data Endpoints': 'quant_journey/api/data_endpoints.md'
+          - 'Data Models': 'quant_journey/api/data_models.md'
+        - 'Architecture': 'quant_journey/architecture.md'
+      - 'Resources':
+        - 'Alpha Glossary': 'resources/alpha_glossary.md'
+      - 'Legal':
+        - 'Risk Disclaimer': 'legal/risk_disclaimer.md'
+  fr:
+    nav:
+      - 'Accueil': 'index.md'
+      - 'Parcours Freemium':
+        - 'Démarrage Rapide': 'getting_started.md'
+        - 'Concepts Clés':
+          - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
+          - 'Le Score de Confiance': 'core_concepts/confidence_score.md'
+      - 'Parcours Pro':
+        - 'Recettes du Trader':
+          - 'Backtester les Signaux': 'pro_journey/cookbook/backtesting_python.md'
+          - 'Gestion du Risque': 'pro_journey/cookbook/risk_management.md'
+          - 'Protocole Risque Weekend': 'pro_journey/cookbook/weekend_risk.md'
+      - 'Fonctionnalités':
+        - 'HarmoGrid': 'features/harmogrid.md'
+        - 'Tableau de Bord de Performance': 'features/performance_dashboard.md'
+        - 'Générateur Pine Script': 'features/pine_script_generator.md'
+        - 'Projections de Gann': 'features/gann_projections.md'
+        - 'Analyse Fondamentale': 'features/fundamental_analysis.md'
+      - 'Parcours Quant':
+        - 'Référence API':
+          - 'Points d''Accès aux Données': 'quant_journey/api/data_endpoints.md'
+          - 'Modèles de Données': 'quant_journey/api/data_models.md'
+        - 'Architecture': 'quant_journey/architecture.md'
+      - 'Ressources':
+        - 'Glossaire Alpha': 'resources/alpha_glossary.md'
+      - 'Légal':
+        - 'Avis de Risque': 'legal/risk_disclaimer.md'
