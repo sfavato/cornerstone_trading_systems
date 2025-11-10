@@ -91,7 +91,6 @@ extra:
 nav:
   - 'Home': 'index.md'
   - 'Freemium Journey':
-    - 'Getting Started': 'getting_started.md'
     - 'Core Concepts':
       - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
       - 'The Confidence Score': 'core_concepts/confidence_score.md'

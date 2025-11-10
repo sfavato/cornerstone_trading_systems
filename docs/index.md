@@ -24,5 +24,4 @@ It's crucial to understand that the bot is not a simple signal generator. It is 
 
 ## Onwards
 
-- [Getting Started](./getting_started.md)
 - [Core Concepts](./core_concepts/confidence_score.md)
