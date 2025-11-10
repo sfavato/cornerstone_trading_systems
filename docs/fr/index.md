@@ -24,5 +24,4 @@ Il est crucial de comprendre que le bot n'est pas un simple générateur de sign
 
 ## Prochaines Étapes
 
-- [Commencer](./getting_started.md)
 - [Comprendre les Concepts](./core_concepts/confidence_score.md)

@@ -1,12 +1,12 @@
 #-- Project Information
-site_name: 'HarmoFinder Docs'
-site_description: 'Official Documentation for the HarmoFinder Bot.'
-site_author: 'The HarmoFinder Team'
-site_url: 'https://docs.harmofinder.ai'
+site_name: 'Cornerstone Indice Docs'
+site_description: 'Official Documentation for the Cornerstone Indice Bot.'
+site_author: 'The Cornerstone Indice Team'
+site_url: 'https://docs.cornerstone-indice.com'
 
 #-- Repository
-repo_name: 'HarmoFinder/docs'
-repo_url: 'https://github.com/HarmoFinder/docs'
+repo_name: 'Cornerstone-Indice/docs'
+repo_url: 'https://github.com/Cornerstone-Indice/docs'
 edit_uri: 'edit/main/docs/'
 
 #-- Theme & Appearance
@@ -90,8 +90,7 @@ extra:
     nav:
       - 'Home': 'index.md'
       - 'Freemium Journey':
-        - 'Getting Started': 'getting_started.md'
-        - 'Core Concepts':
+      - 'Core Concepts':
           - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
           - 'The Confidence Score': 'core_concepts/confidence_score.md'
       - 'Pro Journey':
