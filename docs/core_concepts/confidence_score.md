@@ -6,8 +6,6 @@ The "Confidence Score" is the final, aggregated rating (from 0 to 100) that the 
 - **Score 41-69:** Average quality. Potential for manual analysis but generally ignored by the bot.
 - **Score 70-100:** High quality, validated "Trade Signal." Sent to the execution engine.
 
-The 70 threshold is our default benchmark, but "Pro" and "Quant" users can adjust this filter via the API.
-
 ## Score Components: How It's Calculated
 
 The final 0-100 score is an aggregation of several independent scores.
