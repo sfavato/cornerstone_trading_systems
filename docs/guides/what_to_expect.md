@@ -4,4 +4,4 @@ The Cornerstone Indice bot is a **high-timeframe (HTF)** system. This means it p
 
 *   **Patience is Key:** You may not see a new trade every day. The bot is designed to be highly selective and will wait patiently—sometimes for days—for an "A+" setup that meets its strict Confidence Score threshold.
 *   **Signal Notifications:** When a validated Trade Signal is detected, you will receive a notification (e.g., via Discord or Telegram). This notification will include the Asset, Direction (LONG/SHORT), Entry Price, Stop Loss, and Take Profit targets.
-*   **Trade Management:** If you have auto-trading enabled, the bot will manage the trade for you, moving the stop loss to break-even at the appropriate time and taking profit at predefined targets.
+*   **Trade Management:** We do not manage trades on behalf of users. Instead, the bot sends notifications via Discord messages and webhooks (coming soon) to keep you informed.
