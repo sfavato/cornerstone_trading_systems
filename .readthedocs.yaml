@@ -10,6 +10,11 @@ build:
   tools:
     python: "3.13"
 
+# Declare the languages of your project
+languages:
+  - en
+  - fr
+
 # Tell Read the Docs to use MkDocs
 mkdocs:
   configuration: mkdocs.yml

@@ -1,22 +1,27 @@
-# Pine Script Strategy Generator
+# Pine Script Generator: Your Co-pilot for TradingView
 
-This feature is a powerful bridge between our platform and the TradingView ecosystem. It allows "Pro" and "Quant" users to convert a validated trading setup into a functional Pine Script strategy script in a single click.
+Our Pine Script generator is a tool designed to reinforce our "co-pilot" philosophy. It's not just about giving you a signal, but about providing you with the means to visualize and own it. In one click, you can export any harmonic pattern detected by our system directly onto your TradingView charts.
 
-## How It Works
+## From Signal to Visualization in Three Steps
 
-1.  **Identify a Signal:** From the dashboard, when you see a trading signal with a high confidence score that you want to automate or backtest yourself...
-2.  **Click "Generate Pine Script":** A button on the signal card opens a modal.
-3.  **Copy-Paste into TradingView:** The generated Pine Script code can be directly copied into the TradingView Pine Editor.
+The process is designed to be quick and transparent, allowing you to move from our interface to your familiar analysis environment in seconds.
 
-## Generated Code
+1.  **Select a Signal:** On any signal card, whether in `Nearest Trades` or in the history, you will find an export option.
 
-The script includes:
-- **Entry Logic:** The exact conditions to trigger the trade.
-- **Stop-Loss and Take-Profit Levels:** Based on the pattern's pivot points (A, D) and Fibonacci ratios.
-- **Optional Filters:** Includes placeholders for users to add their own filters (e.g., `ma_filter = close > ta.sma(close, 200)`).
+2.  **Go to the Export Page:** The dedicated page (accessible via `downloadpines.html` on the frontend) will present you with the Pine Script code. This code is not a complex backtesting strategy, but a simple and effective **drawing script**.
 
-## Strategic Use Cases
+3.  **Copy and Paste into TradingView:**
+    - Open your chart on TradingView.
+    - Launch the Pine Editor.
+    - Paste the provided script.
+    - Click "Add to chart."
 
-- **Custom Backtesting:** Quickly test the historical performance of the setup on different assets or timeframes in TradingView.
-- **Creating Complex Alerts:** Use the script as a basis for creating custom alerts in TradingView that match your exact criteria.
-- **Integration with Other Indicators:** Combine the logic of our patterns with your own proprietary indicators in TradingView.
+Instantly, the harmonic pattern (with its X, A, B, C, D points) and the associated Stop-Loss/Take-Profit levels will be overlaid on your chart.
+
+## Why is This an Essential Tool?
+
+- **Confidence through Verification:** Immediately visualize the pattern on TradingView to confirm that it matches your own technical analysis. This builds confidence in the system's detections.
+- **Integration into Your Own Analysis:** Once the pattern is displayed, you can compare it with your own indicators and drawing tools to make a more informed trading decision.
+- **Learning and Development:** For traders who are learning, seeing the pattern correctly "drawn" on a live chart is a powerful educational tool.
+
+The Pine Script generator transforms an algorithmic detection into a visual and interactive analysis tool, making our platform a true co-pilot for your trading decisions.
