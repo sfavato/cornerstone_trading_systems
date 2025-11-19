@@ -1,38 +1,34 @@
-# Le "Confidence Score" (0-100)
+# Le Score de Confiance : Le Cœur de Notre Alpha
 
-Le "Confidence Score" est la note finale et agrégée (de 0 à 100) que le système attribue à un pattern après sa détection. Il répond à une question : **"Quelle est la probabilité que ce pattern réussisse maintenant, dans les conditions de marché actuelles ?"**
+Le **Score de Confiance** est bien plus qu'une simple note ; c'est le cœur de notre Alpha. Il agit comme un filtre dynamique et intelligent qui évalue la **probabilité de succès** d'un pattern harmonique détecté. Chaque score est la sortie d'un modèle prédictif (Machine Learning) qui a été entraîné sur des milliers de cas de trades passés pour optimiser sa capacité à distinguer les opportunités réelles du bruit de marché.
 
-- **Score 0-40 :** Très faible qualité. Ignoré.
-- **Score 41-69 :** Qualité moyenne. Potentiel pour une analyse manuelle mais généralement ignoré par le bot.
-- **Score 70-100 :** Haute qualité, "Signal de Trade" validé. Transmis au moteur d'exécution.
+Notre modèle a démontré une performance robuste durant notre phase de R&D (Phase I), avec une **AUC (Area Under Curve) d'environ 0.80**, confirmant sa forte capacité prédictive.
 
-Le seuil de 70 est notre référence par défaut, mais les utilisateurs "Pro" et "Quant" peuvent ajuster ce filtre via l'API.
+## Les Trois Piliers du Score de Confiance
 
-## Composants du Score : Comment il est Calculé
+Le score est le résultat d'une analyse intégrée de trois piliers d'information. Le modèle ne se contente pas de "voir" le pattern, il analyse le contexte global du marché pour prendre une décision éclairée.
 
-Le score final de 0-100 est une agrégation de plusieurs scores indépendants.
-`Score Final (0-100) = (Score de Pureté Géométrique) + (Bonus de Confluence de Marché) + (Bonus/Malus de Contexte IA)`
+### 1. Facteurs Géométriques : La Pureté de la Structure
 
-### 1. Score de Pureté Géométrique (La Base)
+- **Objectif :** Évaluer la conformité du pattern avec sa définition théorique.
+- **Analyse :** Le modèle mesure la précision des ratios de Fibonacci entre les points clés (X, A, B, C, D) du pattern. Une structure qui respecte rigoureusement les ratios théoriques (par exemple, un point B exactement à 0.618 pour un Gartley) recevra une évaluation positive sur ce pilier. C'est la base de la validation : sans une géométrie correcte, il n'y a pas de signal.
 
-- **Description :** Une note sur la perfection technique du pattern.
-- **Calcul :** Mesure la proximité des ratios de Fibonacci (points X, A, B, C, D) avec la définition "parfaite" du pattern. Un Gartley avec un point B à 0.617 aura un score de pureté bien plus élevé qu'un autre à 0.590.
-- **Impact :** Constitue la base du score. Un pattern "brouillon" commence avec une base faible et a peu de chances de devenir un Signal de Trade.
+### 2. Confluence Technique : La Validation par le Marché
 
-### 2. Score de Confluence de Marché (Le "Où")
+- **Objectif :** Confirmer que le signal est en harmonie avec les conditions actuelles du marché.
+- **Analyse :** Le modèle intègre une série d'indicateurs techniques classiques pour s'assurer que le pattern n'apparaît pas "hors contexte". Les facteurs incluent, mais ne se limitent pas à :
+    - **Le Volume :** Une augmentation du volume dans la zone de complétion du pattern.
+    - **Le RSI (Relative Strength Index) :** La présence de divergences confirmant un essoufflement de la tendance précédente.
+    - **La Tendance de Fond :** L'alignement du signal avec la tendance sur les unités de temps supérieures.
 
-- **Description :** Analyse où sur le graphique le pattern se termine. Un pattern se formant sur un niveau de structure majeur est plus fiable.
-- **Composants :**
-    - **Alignement Volume Profile :** Vérifie le prix d'entrée (point D) par rapport au Volume Profile. Un bonus est accordé si le point D atterrit sur le Point of Control (POC), le Value Area High (VAH) ou le Value Area Low (VAL).
-    - **Divergence RSI :** Vérifie la présence d'une divergence (classique ou cachée) du RSI sur l'unité de temps du pattern, indiquant un affaiblissement du momentum contraire.
-    - **Localisation VWAP :** Compare le prix d'entrée au VWAP (Volume-Weighted Average Price). Un pattern haussier se formant au-dessus du VWAP est considéré comme plus fort.
-    - **Tendance de Fond (HTF) :** Analyse si le pattern est en accord avec la tendance de l'unité de temps supérieure (Higher-Timeframe) pour un meilleur filtrage.
+### 3. Alpha Exotique : L'Avantage Informationnel
 
-### 3. Score de Contexte IA (Le "Quand" / Alpha Exotique)
+- **Objectif :** Intégrer des données externes et macro-économiques pour obtenir une vision complète du risque systémique.
+- **Analyse :** C'est ici que notre Alpha prend toute sa dimension. Le modèle analyse des sources de données non corrélées au prix pour évaluer la santé globale du marché :
+    - **Le Régime de Marché :** Est-ce un marché en tendance, en range, volatile ?
+    - **Les Données On-Chain (pour les cryptos) :** Analyse des flux de capitaux, de l'activité des portefeuilles, etc.
+    - **Les Données de Dérivés :** Open Interest, liquidations, qui peuvent indiquer une faiblesse structurelle.
 
-- **Description :** Notre "sauce secrète". Un score prédictif issu d'un modèle IA (XGBoost) entraîné sur nos données historiques pour répondre à la question : "Maintenant est-ce un bon moment pour que ce pattern réussisse ?"
-- **Données Analysées :**
-    - **Données de Dérivés :** Taux de Financement (Funding Rates), Open Interest, CVD, et Données de Liquidation.
-    - **Données On-Chain :** Flux Nets des Echanges (Exchange Netflows), MVRV (Market Value to Realized Value).
-    - **Données d'Options :** Ratio Put/Call.
-- **Impact :** Agit comme un bonus ou un malus puissant. Un pattern parfait (Pureté) sur un niveau clé (Confluence) peut quand même être rejeté si l'IA détecte que des conditions de marché (ex: funding trop élevé) s'opposent fortement au trade.
+---
+
+**Contrainte de Propriété Intellectuelle (IP) :** Il est essentiel de comprendre que le Score de Confiance est le fruit de notre recherche et développement. Les features exactes utilisées par le modèle, leurs pondérations spécifiques et l'architecture du modèle lui-même restent notre propriété intellectuelle et ne sont pas divulguées. Notre transparence réside dans la performance vérifiable du score, pas dans la révélation de sa formule.
