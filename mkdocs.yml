@@ -63,7 +63,7 @@ plugins:
 extra:
   alternate:
     - name: English
-      link: /
+      link: /en/
       lang: en
     - name: Français
       link: /fr/
