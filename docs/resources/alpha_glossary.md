@@ -2,6 +2,16 @@
 
 This glossary defines the core "alpha" metrics that our system uses to generate and validate signals. Understanding these concepts is critical for getting the most out of HarmoFinder.
 
+!!! note "Exotic Alpha"
+    **Exotic Alpha** refers to the informational advantage (the alpha) derived from **non-traditional or uncorrelated data sources** to price charts. Rather than limiting itself to classic technical analysis, this alpha incorporates external factors to assess market health and sentiment.
+    - **Examples:** On-Chain data (cryptocurrency flows between wallets and exchanges), derivatives data (liquidations, Open Interest), social media sentiment analysis, or even macroeconomic data.
+    - **Role in our system:** It is a key pillar of our **Confidence Score**, allowing us to filter out technically valid signals that face an unfavorable market context.
+
+!!! note "Structural Alpha"
+    **Structural Alpha** is the advantage (the alpha) obtained from the inherent analysis of the **geometric structure of patterns** and their interaction with price dynamics. It is based on the assumption that certain recurring chart patterns have a predictable resolution probability.
+    - **Examples:** The precision of a harmonic pattern's Fibonacci ratios, the location of a signal relative to major support/resistance levels (identified via Gann or Volume Profile).
+    - **Role in our system:** It forms the basis of our detection. Structural alpha identifies "what" and "where," while exotic alpha validates the "when."
+
 !!! note "Cumulative Volume Delta (CVD)"
     CVD is the core of our order flow analysis. It is a running total of the difference between buying and selling volume. A rising CVD indicates net buying pressure, while a falling CVD indicates net selling pressure. A **divergence** between price and CVD is a powerful signal that often precedes a reversal.
 
