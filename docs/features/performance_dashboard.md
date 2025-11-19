@@ -1,26 +1,26 @@
-# Performance Dashboard ("Glass Box")
+# The Performance Dashboard: Radical Transparency
 
-Trust through transparency is our guiding principle. The performance dashboard is not just a marketing showcase; it's a real-time analysis tool designed for serious traders. It offers an unfiltered, aggregated view of the historical performance of **all** pattern detection strategies.
+Our performance dashboard is at the core of our commitment to "Quantified Trust." This is **not an idealized backtest**, but a representation of **real or high-fidelity simulated execution results**. Every trade displayed has followed the same process as the one you observe live, ensuring that past performance is an honest measure of the strategy.
 
-## Key Metrics Displayed
+## Key Performance Indicators (KPIs)
 
-The dashboard is designed to go beyond simple "win rates."
+We focus on metrics that assess not only profitability, but especially the **quality of risk management**.
 
-- **Equity Curve:** A visualization of the growth (or decline) of a $10,000 starting capital, trading all signals.
-- **Profit Factor:** The ratio of gross profits to gross losses. A value greater than 1.0 indicates a profitable strategy.
-- **Maximum Drawdown:** The largest peak-to-trough percentage loss. This is an essential measure of risk.
-- **Score Distribution Chart:** A histogram showing the distribution of "Confidence Scores" (0-100) on historical trades. This helps you visualize which score threshold has been the most profitable.
-- **Filtering by Asset / Timeframe:** Allows users to analyze performance on specific markets (e.g., BTC/USD vs. ETH/USD).
+- **Equity Curve:** Visualizes the growth of a portfolio that would have followed all executed signals, offering a clear view of progress and drawdown periods.
+- **Profitability (Profit Factor):** The classic ratio of gross gains divided by gross losses. A quick indicator of the strategy's viability.
+- **Maximum Drawdown:** The most critical measure of risk. It indicates the maximum loss incurred from a peak to a trough, helping you understand the historical risk of the strategy.
+- **R-Multiple Distribution:** A histogram that classifies trades based on their risk multiple (how many "R" were won or lost).
 
-## How to Use It
+## The R-Multiple: Our Central Evaluation Metric
 
-- **Analyse de Risque :** Avant de suivre une stratégie, évaluez son drawdown maximal pour vous assurer qu'il correspond à votre tolérance au risque.
-- **Optimisation de Filtre :** Utilisez le diagramme de distribution pour décider quel seuil de "Confidence Score" (ex: 70, 75, 80 ?) vous souhaitez exiger pour vos propres trades.
-- **Identifier les Régimes de Marché :** En filtrant par date, vous pouvez analyser comment la stratégie a performé pendant différentes conditions de marché (ex: bull market vs. bear market).
+Beyond the simple win/loss ratio, we use the **R-Multiple (Risk-to-Reward)** as the primary measure of a signal's quality.
 
-!!! note "Note sur la Stratégie de Risque Weekend (WRS)"
+- **Definition:** "R" is the **initial risk** defined for a trade (the distance between the entry point and the Stop-Loss). An R-Multiple of `+3R` means the trade generated a profit equal to three times the initial risk. A losing trade always ends at `-1R`.
+- **Why is it so important?** This metric normalizes performance. A $1000 gain on a high-risk trade is not the same as a $1000 gain on a low-risk trade. The R-Multiple allows us to judge the **effectiveness of the strategy** regardless of position size.
+- **How to analyze it:** A robust strategy consistently generates gains of `+2R`, `+3R`, or more, while systematically cutting losses at `-1R`. Our dashboard allows you to visualize this distribution and confirm the system's ability to find trades with an asymmetric advantage.
 
-    Les périodes de "Risque Extrême" (WRS > 95) sont exclues des calculs de performance pour les trades LONG. Cette exclusion proactive vise à refléter notre approche de préservation du capital, ce qui peut activement contribuer à une réduction du Drawdown Maximal affiché.
+## How to Use the Dashboard
+
 - **Risk Analysis:** Before following a strategy, evaluate its maximum drawdown to ensure it aligns with your risk tolerance.
-- **Filter Optimization:** Use the distribution chart to decide which "Confidence Score" threshold (e.g., 70, 75, 80?) you want to require for your own trades.
+- **Filter Optimization:** Use the R-Multiple distribution chart to see how performance changes at different levels of risk and reward.
 - **Identify Market Regimes:** By filtering by date, you can analyze how the strategy has performed during different market conditions (e.g., bull market vs. bear market).
