@@ -1,6 +1,6 @@
 # Comprendre le Protocole 'Risque Weekend' (WRS)
 
-Le marché des cryptomonnaies ne dort jamais, mais sa nature change radicalement le weekend. Cette page explique comment HarmoFinder gère proactivement les risques associés à ces changements de dynamique.
+Le marché des cryptomonnaies ne dort jamais, mais sa nature change radicalement le weekend. Cette page explique comment Cornerstone Indice gère proactivement les risques associés à ces changements de dynamique.
 
 ## Pour le Trader Pro : Votre Assurance Contre les "Flash Crashs"
 

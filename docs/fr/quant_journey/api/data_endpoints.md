@@ -1,6 +1,6 @@
 # Points d'Accès aux Données
 
-Cette section fournit des informations détaillées sur les points d'accès de l'API HarmoFinder disponibles pour nos utilisateurs du niveau "Quant". Notre API est construite sur une pile haute performance à faible latence (FastAPI, TimescaleDB) pour fournir des données de qualité institutionnelle.
+Cette section fournit des informations détaillées sur les points d'accès de l'API Cornerstone disponibles pour nos utilisateurs du niveau "Quant". Notre API est construite sur une pile haute performance à faible latence (FastAPI, TimescaleDB) pour fournir des données de qualité institutionnelle.
 
 ## `/api/v1/ohlcv/{ex}/{sym}`
 
@@ -13,7 +13,7 @@ Cette section fournit des informations détaillées sur les points d'accès de l
     import requests
     import json
 
-    API_URL = "https://api.harmofinder.ai/api/v1/ohlcv/binance/btcusdt"
+    API_URL = "https://api.cornerstone-indice.com/api/v1/ohlcv/binance/btcusdt"
     # Remplacez par votre clé API réelle
     headers = {"Authorization": "Bearer VOTRE_CLÉ_API"}
 
@@ -27,7 +27,7 @@ Cette section fournit des informations détaillées sur les points d'accès de l
 
 === "cURL (Shell)"
     ```bash
-    curl -X GET "https://api.harmofinder.ai/api/v1/ohlcv/binance/btcusdt" \
+    curl -X GET "https://api.cornerstone-indice.com/api/v1/ohlcv/binance/btcusdt" \
          -H "Authorization: Bearer VOTRE_CLÉ_API"
     ```
 

@@ -100,6 +100,7 @@ extra:
           - 'Weekend Risk Protocol': 'pro_journey/cookbook/weekend_risk.md'
       - 'Features':
         - 'HarmoGrid': 'features/harmogrid.md'
+        - 'Smart Reversal': 'features/smart_reversal.md'
         - 'Performance Dashboard': 'features/performance_dashboard.md'
         - 'AlphaGate Integration': 'features/alphagate_integration.md'
         - 'Pine Script Generator': 'features/pine_script_generator.md'
@@ -130,6 +131,7 @@ extra:
           - 'Protocole Risque Weekend': 'pro_journey/cookbook/weekend_risk.md'
       - 'Fonctionnalités':
         - 'HarmoGrid': 'features/harmogrid.md'
+        - 'Smart Reversal': 'features/smart_reversal.md'
         - 'Tableau de Bord de Performance': 'features/performance_dashboard.md'
         - 'Intégration AlphaGate': 'features/alphagate_integration.md'
         - 'Générateur Pine Script': 'features/pine_script_generator.md'
