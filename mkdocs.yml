@@ -89,16 +89,19 @@ extra:
   en:
     nav:
       - 'Home': 'index.md'
+      - 'Historical Performance': 'performance/historical.md'
       - 'Freemium Journey':
       - 'Core Concepts':
           - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
           - 'The Confidence Score': 'core_concepts/confidence_score.md'
-      - 'Pro Journey':
+      - 'Transparency & Methodology':
+        - 'Overview': 'pro_journey/index.md'
         - 'Trader''s Cookbook':
           - 'Backtesting Signals': 'pro_journey/cookbook/backtesting_python.md'
           - 'Risk Management': 'pro_journey/cookbook/risk_management.md'
           - 'Weekend Risk Protocol': 'pro_journey/cookbook/weekend_risk.md'
       - 'Features':
+        - 'Security Protocols': 'features/security_protocols.md'
         - 'HarmoGrid': 'features/harmogrid.md'
         - 'Smart Reversal': 'features/smart_reversal.md'
         - 'Performance Dashboard': 'features/performance_dashboard.md'
@@ -119,17 +122,20 @@ extra:
   fr:
     nav:
       - 'Accueil': 'index.md'
+      - 'Performance Historique': 'performance/historical.md'
       - 'Parcours Freemium':
         - 'Démarrage Rapide': 'getting_started.md'
         - 'Concepts Clés':
           - 'Pattern vs. Signal': 'core_concepts/pattern_vs_signal.md'
           - 'Le Score de Confiance': 'core_concepts/confidence_score.md'
-      - 'Parcours Pro':
+      - 'Transparence & Méthodologie':
+        - 'Vue d''ensemble': 'pro_journey/index.md'
         - 'Recettes du Trader':
           - 'Backtester les Signaux': 'pro_journey/cookbook/backtesting_python.md'
           - 'Gestion du Risque': 'pro_journey/cookbook/risk_management.md'
           - 'Protocole Risque Weekend': 'pro_journey/cookbook/weekend_risk.md'
       - 'Fonctionnalités':
+        - 'Protocoles de Sécurité': 'features/security_protocols.md'
         - 'HarmoGrid': 'features/harmogrid.md'
         - 'Smart Reversal': 'features/smart_reversal.md'
         - 'Tableau de Bord de Performance': 'features/performance_dashboard.md'
