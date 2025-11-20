@@ -112,6 +112,7 @@ extra:
         - 'Architecture': 'quant_journey/architecture.md'
       - 'Resources':
         - 'Alpha Glossary': 'resources/alpha_glossary.md'
+        - 'Performance Report Q4': 'resources/PERFORMANCE_REPORT_Q4.md'
       - 'Legal':
         - 'Risk Disclaimer': 'legal/risk_disclaimer.md'
   fr:
@@ -141,5 +142,6 @@ extra:
         - 'Architecture': 'quant_journey/architecture.md'
       - 'Ressources':
         - 'Glossaire Alpha': 'resources/alpha_glossary.md'
+        - 'Rapport de Performance Q4': 'resources/PERFORMANCE_REPORT_Q4.md'
       - 'Légal':
         - 'Avis de Risque': 'legal/risk_disclaimer.md'
