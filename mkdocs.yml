@@ -101,6 +101,7 @@ extra:
       - 'Features':
         - 'HarmoGrid': 'features/harmogrid.md'
         - 'Performance Dashboard': 'features/performance_dashboard.md'
+        - 'AlphaGate Integration': 'features/alphagate_integration.md'
         - 'Pine Script Generator': 'features/pine_script_generator.md'
         - 'Gann Projections': 'features/gann_projections.md'
         - 'Fundamental Analysis': 'features/fundamental_analysis.md'
@@ -129,6 +130,7 @@ extra:
       - 'Fonctionnalités':
         - 'HarmoGrid': 'features/harmogrid.md'
         - 'Tableau de Bord de Performance': 'features/performance_dashboard.md'
+        - 'Intégration AlphaGate': 'features/alphagate_integration.md'
         - 'Générateur Pine Script': 'features/pine_script_generator.md'
         - 'Projections de Gann': 'features/gann_projections.md'
         - 'Analyse Fondamentale': 'features/fundamental_analysis.md'
