@@ -20,3 +20,15 @@ Ce glossaire définit les métriques "alpha" de base que notre système utilise 
 
 !!! note "Taux de Financement"
     Les Taux de Financement sont des paiements périodiques effectués entre traders pour maintenir le prix d'un contrat à terme perpétuel en ligne avec le prix au comptant sous-jacent. Des taux de financement positifs élevés suggèrent qu'une majorité de traders sont longs et paient une prime pour maintenir leurs positions, ce qui peut être un indicateur contraire. Inversement, des taux négatifs élevés suggèrent un sentiment baissier.
+
+!!! note "Score de Risque Weekend (WRS)"
+    Le WRS est une métrique propriétaire de Cornerstone Indice conçue pour quantifier le risque systémique associé aux sessions de trading à faible liquidité, typiquement observées durant les weekends sur le marché crypto. Le score est un agrégat de plusieurs indicateurs avancés, incluant mais non limité à, le Ratio de Levier Estimé (ELR), la divergence de l'Intérêt Ouvert (OI), et les patterns de compression de volatilité. Un score WRS élevé déclenche des protocoles de gestion des risques prédéfinis pour protéger le capital.
+
+!!! note "Smart Reversal Override"
+    Un mécanisme de sécurité qui permet au système d'entrer en position contre la tendance principale UNIQUEMENT si une divergence spécifique (Prix vs Momentum) est détectée. Il filtre les faux signaux en s'assurant que le mouvement contre-tendance possède une véritable dynamique.
+
+!!! note "Score de Confiance"
+    Un score de probabilité (0-10) généré par nos modèles de Machine Learning (XGBoost/GNN). Il prédit la probabilité qu'un pattern atteigne son objectif. Seuls les signaux au-dessus d'un seuil dynamique (ex: 7.5/10) sont exécutés.
+
+!!! note "Drift Monitoring"
+    Un processus continu qui compare les propriétés statistiques des données de marché en direct avec les données utilisées pour entraîner nos modèles. Si le marché "dérive" trop loin des conditions d'entraînement (Concept Drift), le système nous alerte d'une dégradation potentielle de la performance, garantissant que l'IA s'adapte aux changements de régime de marché.
