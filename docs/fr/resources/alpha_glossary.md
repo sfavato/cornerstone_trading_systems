@@ -1,6 +1,6 @@
 # Glossaire Alpha
 
-Ce glossaire définit les métriques "alpha" de base que notre système utilise pour générer et valider des signaux. Comprendre ces concepts est essentiel pour tirer le meilleur parti de HarmoFinder.
+Ce glossaire définit les métriques "alpha" de base que notre système utilise pour générer et valider des signaux. Comprendre ces concepts est essentiel pour tirer le meilleur parti de Cornerstone Indice.
 
 !!! note "Alpha Exotique"
     **L'Alpha Exotique** fait référence à l'avantage informationnel (l'alpha) dérivé de **sources de données non traditionnelles ou non corrélées** aux graphiques de prix. Plutôt que de se limiter à l'analyse technique classique, cet alpha intègre des facteurs externes pour évaluer la santé et le sentiment du marché.

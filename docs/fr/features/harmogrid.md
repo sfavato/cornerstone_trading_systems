@@ -14,7 +14,7 @@ Ce n'est pas un bot de grille traditionnel. C'est un mécanisme d'entrée chirur
 
 ## Le Mécanisme "HarmoGrid"
 
-Lorsque HarmoFinder identifie une opportunité de trade compatible avec HarmoGrid, il ne place pas un, mais **quatre ordres limites pondérés** stratégiquement au sein de la zone de retournement potentielle (PRZ).
+Lorsque Cornerstone Indice identifie une opportunité de trade compatible avec HarmoGrid, il ne place pas un, mais **quatre ordres limites pondérés** stratégiquement au sein de la zone de retournement potentielle (PRZ).
 
 La répartition est la suivante :
 
@@ -42,4 +42,4 @@ L'annulation des ordres restants permet de :
 - **Verrouiller les Gains** : Le trade se concentre désormais sur la sortie, pas sur l'entrée.
 - **Éviter le Sur-Risque** : Empêche d'augmenter la taille de la position sur un trade déjà en cours de dénouement.
 
-Faites confiance au processus. Cette logique est conçue pour optimiser votre performance et protéger votre capital, reflétant la philosophie de "Confiance Quantifiée" de HarmoFinder.
+Faites confiance au processus. Cette logique est conçue pour optimiser votre performance et protéger votre capital, reflétant la philosophie de "Confiance Quantifiée" de Cornerstone Indice.

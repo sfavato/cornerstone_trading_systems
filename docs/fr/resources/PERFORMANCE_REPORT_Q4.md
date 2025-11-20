@@ -1,9 +1,9 @@
-# HarmoFinder Alpha : Validation Statistique & Méthodologie
+# Cornerstone Alpha : Validation Statistique & Méthodologie
 ## Rapport de Performance Q4 2025
 
 ### 1. Résumé Exécutif
 
-Ce document présente les résultats de la phase de validation ("Phase I") du moteur de trading algorithmique HarmoFinder Alpha.
+Ce document présente les résultats de la phase de validation ("Phase I") du moteur de trading algorithmique Cornerstone Alpha.
 
 Notre objectif était de transformer l'analyse technique traditionnelle des figures harmoniques (Gartley, Bat, Butterfly) en une science quantitative rigoureuse. En passant d'une approche visuelle subjective à une approche pilotée par le Machine Learning (ML), nous avons cherché à isoler un avantage statistique ("Alpha") durable sur le marché des crypto-monnaies.
 
@@ -15,7 +15,7 @@ La transition vers une infrastructure pilotée par l'IA a eu un impact mesurable
 
 **Tableau Comparatif : Avant vs Après IA**
 
-| Métrique | Approche Classique (Avant IA) | HarmoFinder Alpha (Après IA) | Impact |
+| Métrique | Approche Classique (Avant IA) | Cornerstone Alpha (Après IA) | Impact |
 | :--- | :--- | :--- | :--- |
 | **Méthode de Validation** | Visuelle / Discrétionnaire | Modèle XGBoost & GNN | Scientifique |
 | **Qualité des Données** | 51% (Données partielles) | 99.5% (Historique complet) | +48.5 pts |
@@ -39,7 +39,7 @@ Notre méthodologie, "**Quant-First**", repose sur trois piliers :
 
 #### L'Avantage Informationnel (Alpha)
 
-Contrairement aux bots standards qui n'utilisent que le prix (OHLC), HarmoFinder Alpha intègre des données institutionnelles pour "voir" sous la surface du marché :
+Contrairement aux bots standards qui n'utilisent que le prix (OHLC), Cornerstone Alpha intègre des données institutionnelles pour "voir" sous la surface du marché :
 
 *   **Liquidation Heatmaps** : Pour identifier où se cachent les ordres stop des traders particuliers.
 *   **Order Flow & Open Interest** : Pour mesurer la véritable pression acheteuse ou vendeuse.
@@ -65,4 +65,4 @@ Nous ne vendons pas de rêves de richesse rapide. Nous vendons une gestion profe
     *   **Performances Passées** : Les résultats présentés (y compris les backtests et les scores statistiques comme l'AUC) sont basés sur des données historiques. Les performances passées ne préjugent pas des performances futures. Les conditions de marché peuvent évoluer et affecter la rentabilité de la stratégie.
     *   **Hypothétiques** : Certains résultats présentés peuvent être issus de simulations (backtests). Ces résultats ont des limites inhérentes car ils ne représentent pas des transactions réelles et peuvent ne pas avoir pris en compte l'impact de facteurs de marché tels que le manque de liquidité.
 
-    *Généré par G.E.M. (Generative Executive Master) - Architecture HarmoFinder*
+    *Généré par G.E.M. (Generative Executive Master) - Architecture Cornerstone*

@@ -1,18 +1,18 @@
-# Backtester les Signaux HarmoFinder avec `backtrader`
+# Backtester les Signaux Cornerstone avec `backtrader`
 
-Ce guide fournit un exemple pratique et concret sur la manière de backtester les signaux générés par HarmoFinder en utilisant la populaire bibliothèque Python, `backtrader`.
+Ce guide fournit un exemple pratique et concret sur la manière de backtester les signaux générés par Cornerstone Indice en utilisant la populaire bibliothèque Python, `backtrader`.
 
 ## La `bt.Strategy`
 
-Voici une `bt.Strategy` complète qui démontre comment consommer un CSV de signaux HarmoFinder et exécuter un backtest simple.
+Voici une `bt.Strategy` complète qui démontre comment consommer un CSV de signaux Cornerstone et exécuter un backtest simple.
 
 ```python
 import backtrader as bt
 import pandas as pd
 
-class HarmoFinderStrategy(bt.Strategy):
+class CornerstoneStrategy(bt.Strategy):
     params = (
-        ('signals_csv', 'harmofinder_signals.csv'),
+        ('signals_csv', 'cornerstone_signals.csv'),
     )
 
     def __init__(self):
