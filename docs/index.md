@@ -1,4 +1,10 @@
-# Welcome to Cornerstone Indice
+# Introduction: Cornerstone Trading System
+
+## 🚀 Quick Start
+Accessing the interface for the first time? Start with our navigation guide to understand what you are seeing on the screen:
+👉 **[Navigation Manual: Mastering the Interface](./guides/frontend_guide.md)**
+
+---
 
 ## The "Glass Box" Dashboard: Quantified Trust
 

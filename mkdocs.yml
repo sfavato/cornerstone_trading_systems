@@ -89,6 +89,8 @@ extra:
   en:
     nav:
       - 'Home': 'index.md'
+      - 'Introduction':
+        - 'Beginner''s Guide': 'guides/beginner_guide.md'
       - 'Historical Performance': 'performance/historical.md'
       - 'Freemium Journey':
       - 'Core Concepts':
@@ -122,6 +124,8 @@ extra:
   fr:
     nav:
       - 'Accueil': 'index.md'
+      - 'Introduction':
+        - 'Guide Débutant': 'guides/guide_debutant.md'
       - 'Performance Historique': 'performance/historical.md'
       - 'Parcours Freemium':
         - 'Démarrage Rapide': 'getting_started.md'
