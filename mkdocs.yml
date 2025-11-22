@@ -89,6 +89,8 @@ extra:
   en:
     nav:
       - 'Home': 'index.md'
+      - 'Introduction':
+        - 'Beginner''s Guide': 'guides/beginner_guide.md'
       - 'Historical Performance': 'performance/historical.md'
       - 'Freemium Journey':
       - 'Core Concepts':
