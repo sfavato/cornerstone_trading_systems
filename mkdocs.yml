@@ -122,6 +122,8 @@ extra:
   fr:
     nav:
       - 'Accueil': 'index.md'
+      - 'Introduction':
+        - 'Guide Débutant': 'guides/guide_debutant.md'
       - 'Performance Historique': 'performance/historical.md'
       - 'Parcours Freemium':
         - 'Démarrage Rapide': 'getting_started.md'
