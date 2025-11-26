@@ -35,3 +35,9 @@ A **Detected Pattern** is simply raw material. It is a geometric shape that the 
 A **Trade Signal** is a high-quality, validated opportunity. It is a Detected Pattern that has successfully passed through the entire validation pipeline and received a high **Confidence Score**. Only these "A+" grade setups are passed to the `monitor_trades` service for potential execution.
 
 > **Analogy:** A **Detected Pattern** is like identifying a cloud that *looks* like a rain cloud. A **Trade Signal** is that same cloud, *plus* a confirmed 20-degree drop in temperature, a 90% humidity reading, and a rising wind. We only act on the signal, not the shape.
+
+## The Approach Zone: "Nearest Trade"
+
+To provide users with an early warning, the system doesn't just wait for the exact entry price of a high-confidence signal to be triggered. It also monitors an **Approach Zone**.
+
+When a validated signal's current market price enters this proximity zone (e.g., within 0.5% of the entry price), the system issues a **"Nearest Trade"** alert. This serves as a heads-up, allowing you to prepare for a potential entry without having to watch the charts constantly. It is the final state before a signal becomes an active trade.
